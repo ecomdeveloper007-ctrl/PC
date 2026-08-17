@@ -158,28 +158,28 @@ export default function Services() {
           </div>
 
           {/* Interactive Showcase Layout */}
-          <div className="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden p-6 sm:p-8 lg:p-10">
+          <div className="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden p-5 sm:p-8 lg:p-10">
             
             {/* Horizontal Platform Selector Tab List */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 mb-8 bg-slate-50/50 p-2 rounded-2xl border border-slate-200">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8 bg-slate-50/50 p-1.5 sm:p-2 rounded-2xl border border-slate-200">
               {Object.keys(platforms).map((key) => (
                 <button
                   key={key}
                   onClick={() => setActiveTab(key)}
-                  className={`flex items-center justify-center space-x-2.5 py-3.5 px-4 rounded-xl text-xs font-extrabold tracking-wide transition-all duration-300 cursor-pointer ${
+                  className={`flex items-center justify-center space-x-2 sm:space-x-2.5 py-3 sm:py-3.5 px-3 sm:px-4 rounded-xl text-xs font-extrabold tracking-wide transition-all duration-300 cursor-pointer min-h-[44px] ${
                     activeTab === key
                       ? 'bg-slate-900 text-white shadow-md'
                       : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
                   }`}
                 >
-                  <Laptop className={`w-4 h-4 ${activeTab === key ? 'text-blue-400' : 'text-slate-400'}`} />
-                  <span>{platforms[key].name.split(' ')[0]}</span>
+                  <Laptop className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ${activeTab === key ? 'text-blue-400' : 'text-slate-400'}`} />
+                  <span className="truncate">{platforms[key].name.split(' ')[0]}</span>
                 </button>
               ))}
             </div>
 
             {/* Showcase Main Detail Display */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 pt-4">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 pt-2 sm:pt-4">
               
               {/* Left Side: General Platform Metadata & Performance KPIs */}
               <div className="lg:col-span-5 flex flex-col justify-between">
@@ -189,48 +189,48 @@ export default function Services() {
                     <span>Specialized Platform Delivery</span>
                   </div>
                   
-                  <h4 className="font-display text-2xl font-black text-slate-900 leading-snug">
+                  <h4 className="font-display text-xl sm:text-2xl font-black text-slate-900 leading-snug">
                     {activePlatform.name}
                   </h4>
                   <p className="font-sans text-xs sm:text-sm text-blue-600 font-extrabold mt-1 tracking-wide uppercase">
                     {activePlatform.tagline}
                   </p>
                   
-                  <p className="mt-4 text-xs sm:text-sm text-slate-550 leading-relaxed font-medium">
+                  <p className="mt-3 sm:mt-4 text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
                     {activePlatform.description}
                   </p>
                 </div>
 
                 {/* Highly Visual Technical Metrics Panel */}
-                <div className="mt-8 pt-8 border-t border-slate-100">
-                  <h5 className="text-[10px] font-mono font-bold uppercase tracking-widest text-slate-400 mb-4 block">
+                <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-slate-100">
+                  <h5 className="text-[10px] font-mono font-bold uppercase tracking-widest text-slate-400 mb-3 sm:mb-4 block">
                     Verified Performance Delivery
                   </h5>
-                  <div className="grid grid-cols-3 gap-3">
-                    <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 text-center">
-                      <span className="text-[9px] font-mono font-bold text-slate-500 uppercase block">PageSpeed</span>
-                      <span className="text-lg font-black text-slate-900 tracking-tight block mt-0.5">{activePlatform.stats.speed}</span>
+                  <div className="grid grid-cols-3 gap-2 sm:gap-3">
+                    <div className="bg-slate-50 border border-slate-200 rounded-2xl p-3 sm:p-4 text-center">
+                      <span className="text-[8px] sm:text-[9px] font-mono font-bold text-slate-500 uppercase block">PageSpeed</span>
+                      <span className="text-base sm:text-lg font-black text-slate-900 tracking-tight block mt-0.5">{activePlatform.stats.speed}</span>
                     </div>
-                    <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 text-center">
-                      <span className="text-[9px] font-mono font-bold text-slate-500 uppercase block">Load Time</span>
-                      <span className="text-lg font-black text-slate-900 tracking-tight block mt-0.5">{activePlatform.stats.loadTime}</span>
+                    <div className="bg-slate-50 border border-slate-200 rounded-2xl p-3 sm:p-4 text-center">
+                      <span className="text-[8px] sm:text-[9px] font-mono font-bold text-slate-500 uppercase block">Load Time</span>
+                      <span className="text-base sm:text-lg font-black text-slate-900 tracking-tight block mt-0.5">{activePlatform.stats.loadTime}</span>
                     </div>
-                    <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 text-center">
-                      <span className="text-[9px] font-mono font-bold text-slate-500 uppercase block">Core Focus</span>
-                      <span className="text-[10px] font-black text-slate-900 leading-tight block mt-1 uppercase break-words">{activePlatform.stats.focus}</span>
+                    <div className="bg-slate-50 border border-slate-200 rounded-2xl p-3 sm:p-4 text-center">
+                      <span className="text-[8px] sm:text-[9px] font-mono font-bold text-slate-500 uppercase block">Core Focus</span>
+                      <span className="text-[9px] sm:text-[10px] font-black text-slate-900 leading-tight block mt-1 uppercase break-words">{activePlatform.stats.focus}</span>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Right Side: Detailed Deliverables Checklist */}
-              <div className="lg:col-span-7 bg-slate-50/50 rounded-2xl border border-slate-200 p-6 sm:p-8 flex flex-col justify-between">
+              <div className="lg:col-span-7 bg-slate-50/50 rounded-2xl border border-slate-200 p-5 sm:p-8 flex flex-col justify-between">
                 <div>
-                  <h4 className="font-display text-xs font-bold text-slate-900 uppercase tracking-widest flex items-center gap-2 mb-6 border-b border-slate-200/60 pb-3">
-                    <Settings2 className="w-4.5 h-4.5 text-blue-600" />
+                  <h4 className="font-display text-xs font-bold text-slate-900 uppercase tracking-widest flex items-center gap-2 mb-4 sm:mb-6 border-b border-slate-200/60 pb-3">
+                    <Settings2 className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-blue-600" />
                     <span>Included Scope of Work</span>
                   </h4>
-                  <ul className="space-y-4">
+                  <ul className="space-y-3 sm:space-y-4">
                     {activePlatform.deliverables.map((item, idx) => (
                       <li key={idx} className="flex items-start text-xs sm:text-sm text-slate-650 leading-relaxed font-semibold">
                         <div className="mr-3 shrink-0 mt-0.5 p-0.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100">
@@ -242,7 +242,7 @@ export default function Services() {
                   </ul>
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-slate-200/60 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div className="mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-slate-200/60 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   <div className="text-[11px] text-slate-500 font-bold">
                     * Need custom third-party API configurations? Let me know in your request!
                   </div>
@@ -250,7 +250,7 @@ export default function Services() {
                     href="https://www.fiverr.com/phoebe_johnson"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center py-2.5 px-5 rounded-full text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 transition-all shadow-md cursor-pointer self-start sm:self-center"
+                    className="inline-flex items-center justify-center py-2.5 px-5 rounded-full text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 transition-all shadow-md cursor-pointer self-start sm:self-center min-h-[44px]"
                   >
                     <span>Inquire Profile</span>
                     <ArrowUpRight className="ml-1.5 w-3.5 h-3.5" />

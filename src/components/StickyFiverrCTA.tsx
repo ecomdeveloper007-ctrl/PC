@@ -32,13 +32,13 @@ export default function StickyFiverrCTA() {
   return (
     <AnimatePresence>
       {isVisible && (
-        <div className="fixed bottom-6 right-6 z-40 max-w-sm w-full px-4 sm:px-0">
+        <div className="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 z-40 sm:max-w-sm">
           <motion.div
             initial={{ opacity: 0, y: 50, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 50, scale: 0.9 }}
             transition={{ type: 'spring', stiffness: 200, damping: 20 }}
-            className="rounded-2xl bg-slate-900 border border-blue-500/30 p-5 shadow-2xl relative overflow-hidden backdrop-blur-md"
+            className="rounded-2xl bg-slate-900/95 border border-blue-500/30 p-4 sm:p-5 shadow-2xl relative overflow-hidden backdrop-blur-md"
           >
             {/* Ambient lighting inside overlay floating banner */}
             <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-blue-500 to-cyan-400"></div>
@@ -46,15 +46,15 @@ export default function StickyFiverrCTA() {
             {/* Close trigger */}
             <button
               onClick={dismissBanner}
-              className="absolute top-3.5 right-3.5 text-slate-500 hover:text-white p-1 rounded-full transition-colors"
+              className="absolute top-3 right-3 text-slate-400 hover:text-white p-2 rounded-full transition-colors min-w-[32px] min-h-[32px] flex items-center justify-center cursor-pointer"
               aria-label="Dismiss banner"
               id="sticky-dismiss-btn"
             >
-              <X className="w-3.5 h-3.5" />
+              <X className="w-4 h-4" />
             </button>
 
-            <div className="space-y-4">
-              <div className="flex items-center space-x-2.5">
+            <div className="space-y-3.5 sm:space-y-4">
+              <div className="flex items-center space-x-2.5 pr-6">
                 <div className="w-9 h-9 rounded-xl bg-blue-500/10 text-cyan-400 flex items-center justify-center shrink-0">
                   <Award className="w-5 h-5 fill-cyan-400/10" />
                 </div>
@@ -77,7 +77,7 @@ export default function StickyFiverrCTA() {
                   href="https://www.fiverr.com/phoebe_johnson"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center py-2 px-4 rounded-xl text-[11px] font-bold text-white bg-blue-600 hover:bg-blue-500 transition-all text-center shadow-md shadow-blue-600/20"
+                  className="flex-1 inline-flex items-center justify-center py-2.5 sm:py-2 px-4 rounded-xl text-xs sm:text-[11px] font-bold text-white bg-blue-600 hover:bg-blue-500 transition-all text-center shadow-md shadow-blue-600/20 active:scale-95"
                   id="sticky-fiverr-order"
                 >
                   <span>View Profile</span>
@@ -86,10 +86,10 @@ export default function StickyFiverrCTA() {
                 
                 <a
                   href="#contact"
-                  className="inline-flex items-center justify-center p-2 rounded-xl text-[11px] font-semibold text-slate-300 bg-slate-950 hover:bg-slate-800 border border-slate-800 transition-all"
+                  className="inline-flex items-center justify-center p-2.5 sm:p-2 rounded-xl text-xs sm:text-[11px] font-semibold text-slate-300 bg-slate-950 hover:bg-slate-800 border border-slate-800 transition-all min-w-[40px] min-h-[40px]"
                   title="Ask a Question"
                 >
-                  <ExternalLink className="w-3.5 h-3.5" />
+                  <ExternalLink className="w-4 h-4 sm:w-3.5 sm:h-3.5" />
                 </a>
               </div>
             </div>

@@ -224,12 +224,12 @@ export default function Portfolio() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 15 }}
               transition={{ type: 'spring', duration: 0.4 }}
-              className="relative w-full max-w-4xl rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-2xl z-10 grid grid-cols-1 md:grid-cols-12 max-h-[90vh] md:max-h-[85vh]"
+              className="relative w-full max-w-4xl rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-2xl z-10 grid grid-cols-1 md:grid-cols-12 max-h-[90vh] overflow-y-auto"
             >
               {/* Close Button element */}
               <button
                 onClick={closeLightbox}
-                className="absolute top-4 right-4 p-2 rounded-full bg-slate-900/10 hover:bg-slate-900/25 border border-slate-200/50 text-slate-700 hover:text-slate-900 transition-all z-20 cursor-pointer"
+                className="absolute top-3 right-3 sm:top-4 sm:right-4 p-2 rounded-full bg-slate-900/40 hover:bg-slate-900/60 md:bg-slate-900/10 md:hover:bg-slate-900/25 border border-white/20 md:border-slate-200/50 text-white md:text-slate-700 md:hover:text-slate-900 transition-all z-20 cursor-pointer min-w-[36px] min-h-[36px] flex items-center justify-center backdrop-blur-sm"
                 aria-label="Close Lightbox"
                 id="close-lightbox"
               >
@@ -237,7 +237,7 @@ export default function Portfolio() {
               </button>
 
               {/* Left Column: Huge Screenshot slider */}
-              <div className="md:col-span-7 bg-slate-50 relative aspect-[16/10] md:aspect-auto md:h-full flex items-center justify-center">
+              <div className="md:col-span-7 bg-slate-50 relative aspect-[16/10] max-h-[260px] sm:max-h-[320px] md:max-h-none md:aspect-auto md:h-full flex items-center justify-center overflow-hidden">
                 <img
                   src={selectedLightboxProject.imageUrl}
                   alt={selectedLightboxProject.title}
@@ -248,7 +248,7 @@ export default function Portfolio() {
                 {/* Left navigation arrows */}
                 <button
                   onClick={() => navLightbox('prev')}
-                  className="absolute left-4 p-2 rounded-full bg-slate-950/50 backdrop-blur-sm border border-slate-200/35 text-white hover:scale-105 transition-all cursor-pointer"
+                  className="absolute left-3 sm:left-4 p-2.5 rounded-full bg-slate-950/60 backdrop-blur-sm border border-slate-200/35 text-white hover:scale-105 active:scale-95 transition-all cursor-pointer min-w-[40px] min-h-[40px] flex items-center justify-center"
                   aria-label="Previous Slide"
                   id="lightbox-prev"
                 >
@@ -258,7 +258,7 @@ export default function Portfolio() {
                 {/* Right navigation arrows */}
                 <button
                   onClick={() => navLightbox('next')}
-                  className="absolute right-4 p-2 rounded-full bg-slate-950/50 backdrop-blur-sm border border-slate-200/35 text-white hover:scale-105 transition-all cursor-pointer"
+                  className="absolute right-3 sm:right-4 p-2.5 rounded-full bg-slate-950/60 backdrop-blur-sm border border-slate-200/35 text-white hover:scale-105 active:scale-95 transition-all cursor-pointer min-w-[40px] min-h-[40px] flex items-center justify-center"
                   aria-label="Next Slide"
                   id="lightbox-next"
                 >
@@ -267,13 +267,13 @@ export default function Portfolio() {
               </div>
 
               {/* Right Column: Brief details */}
-              <div className="md:col-span-5 p-8 flex flex-col justify-between overflow-y-auto">
-                <div className="space-y-6">
+              <div className="md:col-span-5 p-5 sm:p-8 flex flex-col justify-between overflow-y-auto">
+                <div className="space-y-5">
                   <div>
-                    <span className="font-mono text-[9px] font-bold text-blue-600 bg-blue-50 border border-blue-105 px-2 py-0.5 rounded uppercase tracking-wider">
+                    <span className="font-mono text-[9px] font-bold text-blue-600 bg-blue-50 border border-blue-100 px-2 py-0.5 rounded uppercase tracking-wider">
                       {selectedLightboxProject.platform}
                     </span>
-                    <h3 className="mt-3 font-display text-2xl font-bold text-slate-900">
+                    <h3 className="mt-2.5 font-display text-xl sm:text-2xl font-bold text-slate-900 leading-snug">
                       {selectedLightboxProject.title}
                     </h3>
                     <p className="text-xs text-slate-500 mt-1 font-bold">
@@ -281,11 +281,11 @@ export default function Portfolio() {
                     </p>
                   </div>
 
-                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
-                    <h4 className="text-[10px] font-mono text-slate-450 uppercase tracking-widest font-extrabold">
+                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2.5">
+                    <h4 className="text-[10px] font-mono text-slate-500 uppercase tracking-widest font-extrabold">
                       Delivered Enhancements
                     </h4>
-                    <ul className="space-y-1.5 text-xs text-slate-705 text-slate-700 list-disc pl-4 font-sans font-semibold">
+                    <ul className="space-y-1.5 text-xs text-slate-700 list-disc pl-4 font-sans font-semibold">
                       <li>Complete responsive wireframe layout overhaul</li>
                       <li>Optimized image delivery and speed audits</li>
                       <li>Full on-page SEO schema tags matching local search</li>
@@ -293,17 +293,17 @@ export default function Portfolio() {
                     </ul>
                   </div>
 
-                  <p className="text-xs text-slate-450 italic font-semibold">
+                  <p className="text-[11px] text-slate-400 italic font-medium">
                     All portfolio sites are deployed live and monitored. Results may vary depending on local active campaigns.
                   </p>
                 </div>
 
-                <div className="mt-8 space-y-3">
+                <div className="mt-6 space-y-3">
                   <a
                     href={selectedLightboxProject.websiteUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center py-3.5 rounded-xl text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 shadow-md cursor-pointer text-center"
+                    className="w-full inline-flex items-center justify-center py-3.5 rounded-xl text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 shadow-md cursor-pointer text-center min-h-[44px]"
                     id="lightbox-live-link"
                   >
                     <span>Visit Live Client Site</span>

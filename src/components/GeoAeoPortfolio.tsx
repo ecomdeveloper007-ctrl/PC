@@ -106,40 +106,40 @@ export default function GeoAeoPortfolio() {
               </p>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-slate-200 space-y-4">
+            <div className="mt-6 sm:mt-8 pt-6 border-t border-slate-200 space-y-3 sm:space-y-4">
               <span className="text-xs font-mono text-slate-400 uppercase tracking-widest font-extrabold block">
                 Enterprise AI channels
               </span>
-              <div className="flex items-center gap-4">
+              <div className="grid grid-cols-3 sm:flex sm:items-center gap-2 sm:gap-4">
                 <button
                   onClick={() => setActiveTab('ChatGPT')}
-                  className={`flex-1 py-3 px-4 rounded-xl text-xs font-bold border transition-colors cursor-pointer ${
+                  className={`py-2.5 sm:py-3 px-2 sm:px-4 rounded-xl text-[11px] sm:text-xs font-bold border transition-colors cursor-pointer min-h-[44px] flex items-center justify-center text-center ${
                     activeTab === 'ChatGPT'
                       ? 'bg-purple-100 text-purple-700 border-purple-300'
                       : 'bg-slate-50 text-slate-600 border-slate-200 hover:text-slate-900 hover:bg-slate-100'
                   }`}
                 >
-                  ChatGPT Search
+                  <span className="truncate">ChatGPT</span>
                 </button>
                 <button
                   onClick={() => setActiveTab('Gemini')}
-                  className={`flex-1 py-3 px-4 rounded-xl text-xs font-bold border transition-colors cursor-pointer ${
+                  className={`py-2.5 sm:py-3 px-2 sm:px-4 rounded-xl text-[11px] sm:text-xs font-bold border transition-colors cursor-pointer min-h-[44px] flex items-center justify-center text-center ${
                     activeTab === 'Gemini'
-                      ? 'bg-blue-105 bg-blue-50 text-blue-700 border-blue-300'
+                      ? 'bg-blue-50 text-blue-700 border-blue-300'
                       : 'bg-slate-50 text-slate-600 border-slate-200 hover:text-slate-900 hover:bg-slate-100'
                   }`}
                 >
-                  Google Gemini
+                  <span className="truncate">Gemini</span>
                 </button>
                 <button
                   onClick={() => setActiveTab('Perplexity')}
-                  className={`flex-1 py-3 px-4 rounded-xl text-xs font-bold border transition-colors cursor-pointer ${
+                  className={`py-2.5 sm:py-3 px-2 sm:px-4 rounded-xl text-[11px] sm:text-xs font-bold border transition-colors cursor-pointer min-h-[44px] flex items-center justify-center text-center ${
                     activeTab === 'Perplexity'
-                      ? 'bg-teal-105 bg-teal-50 text-teal-700 border-teal-300'
+                      ? 'bg-teal-50 text-teal-700 border-teal-300'
                       : 'bg-slate-50 text-slate-600 border-slate-200 hover:text-slate-900 hover:bg-slate-100'
                   }`}
                 >
-                  Perplexity AI
+                  <span className="truncate">Perplexity</span>
                 </button>
               </div>
             </div>
@@ -150,59 +150,59 @@ export default function GeoAeoPortfolio() {
             <div className="rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between h-full hover:shadow-md transition-shadow duration-300">
               
               {/* Terminal window buttons top bar */}
-              <div className="bg-slate-50 px-6 py-4 border-b border-slate-200 flex items-center justify-between">
+              <div className="bg-slate-50 px-4 sm:px-6 py-3 sm:py-4 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                 <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 rounded-full bg-rose-450 bg-rose-400"></div>
-                  <div className="w-3 h-3 rounded-full bg-amber-400"></div>
-                  <div className="w-3 h-3 rounded-full bg-emerald-500"></div>
-                  <span className="ml-2 font-mono text-[10px] text-slate-450 tracking-widest uppercase font-bold text-slate-505">
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-rose-400"></div>
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-amber-400"></div>
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-emerald-500"></div>
+                  <span className="ml-2 font-mono text-[9px] sm:text-[10px] text-slate-500 tracking-widest uppercase font-bold">
                     Generative Engine Sandbox
                   </span>
                 </div>
                 
-                <span className="font-mono text-[9px] font-bold text-blue-700 bg-blue-50 border border-blue-200 px-2.5 py-0.5 rounded">
+                <span className="font-mono text-[8px] sm:text-[9px] font-bold text-blue-700 bg-blue-50 border border-blue-200 px-2 sm:px-2.5 py-0.5 rounded self-start sm:self-auto">
                   Query Status: 100% Citation Secured
                 </span>
               </div>
 
               {/* Terminal Body */}
-              <div className="p-8 space-y-6 flex-1">
+              <div className="p-4 sm:p-8 space-y-5 sm:space-y-6 flex-1">
                 
                 {/* User Prompt */}
-                <div className="flex items-start space-x-3 text-xs leading-normal">
-                  <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center font-bold text-white text-xs shrink-0 font-mono shadow-sm">
+                <div className="flex items-start space-x-2.5 sm:space-x-3 text-xs leading-normal">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-blue-600 flex items-center justify-center font-bold text-white text-xs shrink-0 font-mono shadow-sm">
                     U
                   </div>
-                  <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-slate-800 w-full font-sans">
-                    <span className="font-mono text-[9px] font-bold text-slate-400 uppercase tracking-widest block mb-1">
+                  <div className="p-3.5 sm:p-4 rounded-2xl bg-slate-50 border border-slate-200 text-slate-800 w-full font-sans">
+                    <span className="font-mono text-[8px] sm:text-[9px] font-bold text-slate-400 uppercase tracking-widest block mb-1">
                       User search query input:
                     </span>
-                    <p className="font-extrabold text-slate-900 italic">
+                    <p className="font-extrabold text-slate-900 italic text-xs sm:text-sm">
                       "{verdicts[activeTab].query}"
                     </p>
                   </div>
                 </div>
 
                 {/* COMPARATIVE RESULTS */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2 font-sans">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 pt-1 sm:pt-2 font-sans">
                   
                   {/* Pre Optimization Block */}
-                  <div className="space-y-2">
+                  <div className="space-y-1.5 sm:space-y-2">
                     <span className="font-mono text-[9px] text-rose-600 font-bold uppercase tracking-widest block">
                       🔴 Standard crawling (Without PJ Schema)
                     </span>
-                    <div className="p-5 rounded-2xl bg-rose-50 border border-rose-100 text-xs text-rose-950 font-semibold leading-relaxed h-[180px] overflow-y-auto">
+                    <div className="p-4 sm:p-5 rounded-2xl bg-rose-50 border border-rose-100 text-xs text-rose-950 font-semibold leading-relaxed min-h-[140px] max-h-[190px] overflow-y-auto">
                       {verdicts[activeTab].preText}
                     </div>
                   </div>
 
                   {/* Post Optimization Block */}
-                  <div className="space-y-2">
+                  <div className="space-y-1.5 sm:space-y-2">
                     <span className="font-mono text-[9px] text-emerald-700 font-bold uppercase tracking-widest block">
                       🟢 Optimized Answer (With PJ GEO System)
                     </span>
-                    <div className="p-5 rounded-2xl bg-emerald-50 border border-emerald-100 text-xs text-emerald-950 font-bold leading-relaxed h-[180px] overflow-y-auto relative">
-                      <p className="mb-3">
+                    <div className="p-4 sm:p-5 rounded-2xl bg-emerald-50 border border-emerald-100 text-xs text-emerald-950 font-bold leading-relaxed min-h-[140px] max-h-[190px] overflow-y-auto relative">
+                      <p className="mb-3 pr-6">
                         {verdicts[activeTab].postText}
                       </p>
                       
@@ -215,14 +215,14 @@ export default function GeoAeoPortfolio() {
                 </div>
 
                 {/* Citations list footer */}
-                <div className="pt-4 border-t border-slate-150 text-xs flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <div className="pt-4 border-t border-slate-150 text-xs flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
                   <div>
                     <span className="font-mono text-[9px] text-slate-400 font-bold uppercase tracking-widest block mb-1">
                       LLM Citations & Reference URLs Found:
                     </span>
-                    <div className="flex flex-wrap gap-2 mt-1">
+                    <div className="flex flex-wrap gap-1.5 mt-1">
                       {verdicts[activeTab].citations.map((cit) => (
-                        <span key={cit} className="text-[10px] text-blue-700 font-bold font-mono bg-blue-50 px-2 py-0.5 rounded border border-blue-200">
+                        <span key={cit} className="text-[9px] sm:text-[10px] text-blue-700 font-bold font-mono bg-blue-50 px-2 py-0.5 rounded border border-blue-200 break-all">
                           🔗 {cit}
                         </span>
                       ))}
@@ -233,7 +233,7 @@ export default function GeoAeoPortfolio() {
                     href="https://www.fiverr.com/phoebe_johnson"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="self-start sm:self-center inline-flex items-center text-xs font-bold text-blue-600 hover:text-blue-700 transition-colors whitespace-nowrap"
+                    className="self-start sm:self-center inline-flex items-center text-xs font-bold text-blue-600 hover:text-blue-700 transition-colors whitespace-nowrap min-h-[36px]"
                   >
                     <span>Secure your AI citation</span>
                     <ArrowUpRight className="ml-1 w-3.5 h-3.5" />

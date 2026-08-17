@@ -25,11 +25,11 @@ export default function About() {
               <div className="absolute -inset-1 rounded-3xl bg-blue-600/5 group-hover:bg-blue-600/10 blur-md transition-colors duration-500"></div>
               
               {/* Profile Wrapper */}
-              <div className="relative rounded-2xl bg-white p-4 border border-slate-200 shadow-sm">
-                <div className="relative rounded-xl overflow-hidden aspect-[4/5] bg-slate-50 flex flex-col items-center justify-center p-8 text-center border border-slate-100">
+              <div className="relative rounded-2xl bg-white p-3 sm:p-4 border border-slate-200 shadow-sm">
+                <div className="relative rounded-xl overflow-hidden bg-slate-50 flex flex-col items-center justify-center p-5 sm:p-8 text-center border border-slate-100">
                   
                   {/* Profile avatar image */}
-                  <div className="w-36 h-36 rounded-full p-1 mb-5 ring-4 ring-emerald-500/20 shadow-lg relative">
+                  <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-full p-1 mb-4 sm:mb-5 ring-4 ring-emerald-500/20 shadow-lg relative shrink-0">
                     <img
                       src={pjPhoto}
                       alt="PJ - Ecommerce & SEO Specialist"
@@ -41,22 +41,22 @@ export default function About() {
                   <h3 className="font-display text-2xl font-bold text-slate-900">PJ</h3>
                   <p className="text-xs font-mono text-blue-600 uppercase tracking-widest mt-1 font-semibold">Ecommerce Expert & Partner</p>
                   
-                  <div className="flex items-center space-x-1.5 text-xs text-slate-600 mt-4 bg-white px-3.5 py-1.5 rounded-full border border-slate-200">
-                    <MapPin className="w-3.5 h-3.5 text-blue-600" />
+                  <div className="flex items-center space-x-1.5 text-xs text-slate-600 mt-3 sm:mt-4 bg-white px-3.5 py-1.5 rounded-full border border-slate-200">
+                    <MapPin className="w-3.5 h-3.5 text-blue-600 shrink-0" />
                     <span>Virginia, United States</span>
                   </div>
 
                   {/* Trust markers inside details */}
-                  <div className="mt-8 pt-6 border-t border-slate-200 w-full grid grid-cols-2 gap-4">
+                  <div className="mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-slate-200 w-full grid grid-cols-2 gap-3 sm:gap-4">
                     <div className="text-left">
                       <span className="text-[10px] font-mono uppercase tracking-wider text-slate-400 block">Rating</span>
-                      <span className="text-base font-bold text-slate-900 flex items-center">
+                      <span className="text-sm sm:text-base font-bold text-slate-900 flex items-center">
                         4.9/5 <Star className="w-3.5 h-3.5 text-amber-500 fill-amber-500 ml-1" />
                       </span>
                     </div>
                     <div className="text-left">
                       <span className="text-[10px] font-mono uppercase tracking-wider text-slate-400 block">Account status</span>
-                      <span className="text-xs font-bold text-blue-650">Verified Expert</span>
+                      <span className="text-xs font-bold text-blue-600">Verified Expert</span>
                     </div>
                   </div>
                 </div>

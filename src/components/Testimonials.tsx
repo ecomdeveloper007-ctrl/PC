@@ -55,38 +55,38 @@ export default function Testimonials() {
         </div>
 
         {/* Global Rating Score Banner */}
-        <div className="mb-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-6 rounded-2xl bg-white border border-slate-200 flex items-center space-x-4 shadow-sm">
-            <div className="p-3 rounded-xl bg-amber-500/10 text-amber-500">
-              <Star className="w-8 h-8 fill-amber-500" />
+        <div className="mb-12 sm:mb-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div className="p-4 sm:p-6 rounded-2xl bg-white border border-slate-200 flex items-center space-x-3.5 sm:space-x-4 shadow-sm">
+            <div className="p-2.5 sm:p-3 rounded-xl bg-amber-500/10 text-amber-500 shrink-0">
+              <Star className="w-6 h-6 sm:w-8 sm:h-8 fill-amber-500" />
             </div>
             <div>
-              <span className="text-3xl font-extrabold text-slate-900">4.9 / 5.0</span>
-              <p className="text-xs text-slate-500 font-bold mt-0.5 uppercase tracking-wide">
+              <span className="text-2xl sm:text-3xl font-extrabold text-slate-900">4.9 / 5.0</span>
+              <p className="text-[10px] sm:text-xs text-slate-500 font-bold mt-0.5 uppercase tracking-wide">
                 Average Customer Satisfaction
               </p>
             </div>
           </div>
 
-          <div className="p-6 rounded-2xl bg-white border border-slate-200 flex items-center space-x-4 shadow-sm">
-            <div className="p-3 rounded-xl bg-blue-500/10 text-blue-600">
-              <Award className="w-8 h-8 font-bold" />
+          <div className="p-4 sm:p-6 rounded-2xl bg-white border border-slate-200 flex items-center space-x-3.5 sm:space-x-4 shadow-sm">
+            <div className="p-2.5 sm:p-3 rounded-xl bg-blue-500/10 text-blue-600 shrink-0">
+              <Award className="w-6 h-6 sm:w-8 sm:h-8 font-bold" />
             </div>
             <div>
-              <span className="text-3xl font-extrabold text-slate-900">4,500+</span>
-              <p className="text-xs text-slate-505 font-bold mt-0.5 uppercase tracking-wide">
+              <span className="text-2xl sm:text-3xl font-extrabold text-slate-900">4,500+</span>
+              <p className="text-[10px] sm:text-xs text-slate-500 font-bold mt-0.5 uppercase tracking-wide">
                 Verified Global Reviews
               </p>
             </div>
           </div>
 
-          <div className="p-6 rounded-2xl bg-white border border-slate-200 flex items-center space-x-4 shadow-sm">
-            <div className="p-3 rounded-xl bg-cyan-500/10 text-cyan-600">
-              <ShieldCheck className="w-8 h-8 font-bold" />
+          <div className="p-4 sm:p-6 rounded-2xl bg-white border border-slate-200 flex items-center space-x-3.5 sm:space-x-4 shadow-sm sm:col-span-2 lg:col-span-1">
+            <div className="p-2.5 sm:p-3 rounded-xl bg-cyan-500/10 text-cyan-600 shrink-0">
+              <ShieldCheck className="w-6 h-6 sm:w-8 sm:h-8 font-bold" />
             </div>
             <div>
-              <span className="text-2xl font-extrabold text-slate-900">Elite Specialist</span>
-              <p className="text-xs text-slate-505 font-bold mt-0.5 uppercase tracking-wide">
+              <span className="text-xl sm:text-2xl font-extrabold text-slate-900">Elite Specialist</span>
+              <p className="text-[10px] sm:text-xs text-slate-500 font-bold mt-0.5 uppercase tracking-wide">
                 Verified top-tier consultant
               </p>
             </div>
@@ -94,7 +94,7 @@ export default function Testimonials() {
         </div>
 
         {/* Category Tabs for Review selection */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12 border-b border-slate-200 pb-6">
+        <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mb-10 sm:mb-12 border-b border-slate-200 pb-5 sm:pb-6">
           {(['All', 'Shopify', 'WordPress & Webflow', 'Local business & SEO'] as const).map((cat) => (
             <button
               key={cat}
@@ -102,10 +102,10 @@ export default function Testimonials() {
                 setActiveCategory(cat);
                 setActiveIndex(0);
               }}
-              className={`px-4 py-2 rounded-lg text-xs font-bold tracking-wide transition-colors cursor-pointer ${
+              className={`px-3 sm:px-4 py-2 rounded-lg text-xs font-bold tracking-wide transition-colors cursor-pointer min-h-[38px] ${
                 activeCategory === cat
                   ? 'bg-blue-600 text-white shadow-sm'
-                  : 'bg-white text-slate-655 text-slate-600 hover:text-slate-900 border border-slate-200'
+                  : 'bg-white text-slate-600 hover:text-slate-900 border border-slate-200'
               }`}
             >
               {cat}
@@ -116,49 +116,49 @@ export default function Testimonials() {
         {/* Testimonial Active Display Slide */}
         <div className="max-w-4xl mx-auto">
           {currentReview ? (
-            <div className="relative rounded-3xl bg-white border border-slate-200 p-8 sm:p-12 shadow-sm relative">
-              <span className="absolute top-6 right-8 text-slate-100">
-                <Quote className="w-24 h-24 stroke-[1.5]" />
+            <div className="relative rounded-3xl bg-white border border-slate-200 p-6 sm:p-12 shadow-sm">
+              <span className="absolute top-4 right-6 sm:top-6 sm:right-8 text-slate-100/70 pointer-events-none">
+                <Quote className="w-16 h-16 sm:w-24 sm:h-24 stroke-[1.5]" />
               </span>
 
-              <div className="relative z-10 space-y-6">
+              <div className="relative z-10 space-y-5 sm:space-y-6">
                 
                 {/* 5 stars rating */}
                 <div className="flex gap-1 text-amber-500">
                   {Array.from({ length: currentReview.rating }).map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-amber-500 font-bold" />
+                    <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-amber-500 font-bold" />
                   ))}
                 </div>
 
                 {/* Review Message Text */}
-                <p className="font-sans text-base sm:text-lg text-slate-700 leading-relaxed italic font-semibold">
+                <p className="font-sans text-sm sm:text-base md:text-lg text-slate-700 leading-relaxed italic font-semibold">
                   "{currentReview.review}"
                 </p>
 
                 {/* Account Details Footer card */}
-                <div className="pt-6 border-t border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div className="pt-5 sm:pt-6 border-t border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   <div className="flex items-center space-x-3.5">
                     <img
                       src={currentReview.avatarUrl}
                       alt={currentReview.name}
-                      className="w-12 h-12 rounded-full object-cover border-2 border-blue-500/20 shadow-sm"
+                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-blue-500/20 shadow-sm shrink-0"
                       referrerPolicy="no-referrer"
                     />
                     <div>
-                      <h4 className="text-sm font-extrabold text-slate-900">
+                      <h4 className="text-xs sm:text-sm font-extrabold text-slate-900">
                         {currentReview.name}
                       </h4>
-                      <p className="text-xs text-slate-500 font-bold">
+                      <p className="text-[11px] sm:text-xs text-slate-500 font-bold">
                         {currentReview.company}
                       </p>
                     </div>
                   </div>
 
                   <div className="text-left sm:text-right">
-                    <span className="text-[10px] font-mono font-extrabold text-blue-600 uppercase tracking-widest block">
+                    <span className="text-[9px] sm:text-[10px] font-mono font-extrabold text-blue-600 uppercase tracking-widest block">
                       Services Purchased:
                     </span>
-                    <span className="text-xs font-bold text-slate-705 mt-1 block">
+                    <span className="text-xs font-bold text-slate-700 mt-0.5 sm:mt-1 block">
                       {currentReview.servicePurchased}
                     </span>
                   </div>
@@ -170,7 +170,7 @@ export default function Testimonials() {
               <div className="absolute left-0 right-0 -bottom-6 flex justify-center space-x-3 z-20">
                 <button
                   onClick={prevSlider}
-                  className="w-12 h-12 rounded-full bg-white border border-slate-200 text-slate-600 hover:text-slate-900 flex items-center justify-center transition-all shadow-md hover:scale-105 active:scale-95 cursor-pointer"
+                  className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white border border-slate-200 text-slate-600 hover:text-slate-900 flex items-center justify-center transition-all shadow-md hover:scale-105 active:scale-95 cursor-pointer min-w-[44px] min-h-[44px]"
                   aria-label="Previous review"
                   id="review-prev"
                 >
@@ -178,7 +178,7 @@ export default function Testimonials() {
                 </button>
                 <button
                   onClick={nextSlider}
-                  className="w-12 h-12 rounded-full bg-white border border-slate-200 text-slate-600 hover:text-slate-900 flex items-center justify-center transition-all shadow-md hover:scale-105 active:scale-95 cursor-pointer"
+                  className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white border border-slate-200 text-slate-600 hover:text-slate-900 flex items-center justify-center transition-all shadow-md hover:scale-105 active:scale-95 cursor-pointer min-w-[44px] min-h-[44px]"
                   aria-label="Next review"
                   id="review-next"
                 >
