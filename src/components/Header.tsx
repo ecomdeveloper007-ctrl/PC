@@ -89,32 +89,36 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Menu Dropdown */}
       <div
-        className={`md:hidden fixed inset-0 top-[60px] z-40 bg-white/98 backdrop-blur-lg border-t border-slate-200 transform transition-transform duration-300 ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`md:hidden fixed inset-x-0 top-full bg-white border-b border-slate-200 shadow-2xl transition-all duration-300 ease-in-out ${
+          isOpen
+            ? 'opacity-100 visible translate-y-0'
+            : 'opacity-0 invisible -translate-y-2 pointer-events-none'
         }`}
       >
-        <div className="px-4 pt-6 pb-8 space-y-4 shadow-xl">
+        <div className="px-6 py-6 space-y-2 bg-white max-h-[calc(100vh-80px)] overflow-y-auto">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="block text-slate-700 hover:text-blue-600 px-3 py-3 rounded-lg text-sm font-semibold tracking-wide border-b border-slate-100 transition-colors"
+              className="block text-slate-800 hover:text-blue-600 hover:bg-slate-50 px-4 py-3 rounded-xl text-sm font-semibold tracking-wide border-b border-slate-100 last:border-0 transition-colors"
             >
               {link.label}
             </a>
           ))}
-          <div className="pt-6">
+          <div className="pt-4">
             <a
               href="https://www.fiverr.com/phoebe_johnson"
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-center w-full py-3 rounded-full text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 transition-all shadow-md shadow-blue-100"
+              onClick={() => setIsOpen(false)}
+              className="flex items-center justify-center w-full py-3.5 px-4 rounded-xl text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 transition-all shadow-md shadow-blue-200"
               id="mobile-header-fiverr-cta"
             >
-              Hire Me Online
+              <span>Hire Me Online</span>
+              <ArrowUpRight className="ml-2 w-4 h-4" />
             </a>
           </div>
         </div>

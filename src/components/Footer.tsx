@@ -143,7 +143,7 @@ export default function Footer() {
               Verified Order Flow
             </h4>
             <p className="text-[11px] text-slate-500 leading-normal font-bold">
-              Proceed securely via our official profile.
+              Proceed securely via my official profile.
             </p>
             <a
               href="https://www.fiverr.com/phoebe_johnson"

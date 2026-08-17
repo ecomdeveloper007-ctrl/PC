@@ -6,6 +6,7 @@
 import { motion } from 'motion/react';
 import { Award, CheckCircle2, MapPin, Zap, Star, ShieldAlert } from 'lucide-react';
 import { ABOUT_EXPERTISE } from '../data';
+import pjPhoto from '../assets/images/Pj.webp';
 
 export default function About() {
   return (
@@ -27,11 +28,14 @@ export default function About() {
               <div className="relative rounded-2xl bg-white p-4 border border-slate-200 shadow-sm">
                 <div className="relative rounded-xl overflow-hidden aspect-[4/5] bg-slate-50 flex flex-col items-center justify-center p-8 text-center border border-slate-100">
                   
-                  {/* Mock profile graphics */}
-                  <div className="w-32 h-32 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-500 p-1 mb-6 shadow-md">
-                    <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
-                      <span className="font-display font-bold text-4xl text-slate-800 tracking-widest">PJ</span>
-                    </div>
+                  {/* Profile avatar image */}
+                  <div className="w-36 h-36 rounded-full p-1 mb-5 ring-4 ring-emerald-500/20 shadow-lg relative">
+                    <img
+                      src={pjPhoto}
+                      alt="PJ - Ecommerce & SEO Specialist"
+                      className="w-full h-full object-cover rounded-full shadow-inner"
+                      referrerPolicy="no-referrer"
+                    />
                   </div>
 
                   <h3 className="font-display text-2xl font-bold text-slate-900">PJ</h3>
