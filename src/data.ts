@@ -3,7 +3,150 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { Project, SeoCaseStudy, ServiceItem, Testimonial, TimelineStep, Feature } from './types';
+import { Project, SeoCaseStudy, ServiceItem, Testimonial, TimelineStep, Feature, FiverrGig } from './types';
+
+export const FIVERR_GIGS: FiverrGig[] = [
+  {
+    id: 'gig-shopify-dropshipping',
+    title: 'Create Automated Shopify Dropshipping Store',
+    category: 'Shopify',
+    badge: 'Top Seller',
+    rating: 4.9,
+    reviewsCount: '1.2k+',
+    description: 'Turnkey automated Shopify dropshipping store configured with top winning products, trusted suppliers, conversion-boosted product layouts, and seamless order fulfillment setup.',
+    keyFeatures: [
+      'Hand-picked high-margin winning products',
+      'Premium responsive theme setup & customization',
+      'Automated supplier & inventory synchronization',
+      'Essential sales apps & fast checkout configuration'
+    ],
+    deliveryTime: '2-4 Days',
+    gigUrl: 'https://www.fiverr.com/phoebe_johnson/create-shopify-dropshipping-store?ref_ctx_id=a08d7f3fd26c4018a1be53fa64ef15ae&pckg_id=1&source=seller_page',
+    popular: true
+  },
+  {
+    id: 'gig-shopify-design-redesign',
+    title: 'Shopify Website Design & Store Redesign',
+    category: 'Shopify',
+    badge: 'Best Rated',
+    rating: 5.0,
+    reviewsCount: '850+',
+    description: 'Transform an outdated store or launch a brand-new, modern Shopify store with customized UI/UX, mobile-first responsiveness, fast load speeds, and maximum sales conversion focus.',
+    keyFeatures: [
+      'Bespoke modern UI/UX design & branding',
+      'Complete desktop, tablet & mobile optimization',
+      'High-converting product pages & trust badges',
+      'Navigation, header & footer structuring'
+    ],
+    deliveryTime: '3-5 Days',
+    gigUrl: 'https://www.fiverr.com/phoebe_johnson/shopify-website-design-shopify-design-shopify-store-shopify-redesign-shopify?ref_ctx_id=a08d7f3fd26c4018a1be53fa64ef15ae&pckg_id=1&source=seller_page',
+    popular: true
+  },
+  {
+    id: 'gig-one-product-shopify',
+    title: 'One Product Shopify Store & Dropshipping Website',
+    category: 'Shopify',
+    badge: 'High Conversion',
+    rating: 4.9,
+    reviewsCount: '620+',
+    description: 'High-impact, single-product funnel designed specifically for viral TikTok, Meta, and Google ads. Laser-focused storytelling, persuasive copy, and zero friction to checkout.',
+    keyFeatures: [
+      'Viral single-product landing page layout',
+      'Persuasive copywriting & feature benefits blocks',
+      'Customer review imports & dynamic social proof',
+      '1-click direct add-to-cart checkout workflow'
+    ],
+    deliveryTime: '2-3 Days',
+    gigUrl: 'https://www.fiverr.com/phoebe_johnson/one-product-shopify-store-dropshipping-website?ref_ctx_id=a08d7f3fd26c4018a1be53fa64ef15ae&pckg_id=1&source=seller_page'
+  },
+  {
+    id: 'gig-turnkey-dropshipping',
+    title: 'Create Dropshipping Store & Shopify Website',
+    category: 'Shopify',
+    badge: 'Turnkey E-Com',
+    rating: 5.0,
+    reviewsCount: '490+',
+    description: 'Full-scale dropshipping eCommerce business setup including niche market research, vetted product catalog import, branded assets, payment gateway setup, and launch readiness.',
+    keyFeatures: [
+      'Comprehensive niche selection & trending catalog',
+      'Branded color palette, logo & banner design',
+      'Payment gateways, shipping zones & tax setup',
+      'Full post-delivery guidance & store walkthrough'
+    ],
+    deliveryTime: '3-4 Days',
+    gigUrl: 'https://www.fiverr.com/phoebe_johnson/create-dropshipping-store-shopify-website-shopify-store-dropshipping-shopify?ref_ctx_id=a08d7f3fd26c4018a1be53fa64ef15ae&pckg_id=1&source=seller_page'
+  },
+  {
+    id: 'gig-wordpress-design',
+    title: 'WordPress Website Design & Development',
+    category: 'WordPress',
+    badge: 'Elementor Pro',
+    rating: 4.9,
+    reviewsCount: '940+',
+    description: 'Professional, secure, and fully responsive WordPress websites using Elementor Pro or custom Gutenberg blocks. Tailored for corporate businesses, agencies, and local service providers.',
+    keyFeatures: [
+      'Custom Elementor Pro visual design architecture',
+      'Mobile & tablet responsive across all screen sizes',
+      'Fast loading speed & Core Web Vitals optimization',
+      'Contact forms, booking integration & security firewall'
+    ],
+    deliveryTime: '3-5 Days',
+    gigUrl: 'https://www.fiverr.com/phoebe_johnson/build-website-for-your-wordpress-website-design?ref_ctx_id=da6ec7ba96d745c0868d1262b870bef6&pckg_id=1&source=seller_page',
+    popular: true
+  },
+  {
+    id: 'gig-webflow-figma',
+    title: 'Webflow Website Design, Figma to Webflow & Development',
+    category: 'Webflow',
+    badge: 'Premium Webflow',
+    rating: 5.0,
+    reviewsCount: '410+',
+    description: 'Bespoke, high-end Webflow websites with smooth animations, custom interactions, and pixel-perfect translation from Figma designs. Ideal for SaaS, startups, and tech brands.',
+    keyFeatures: [
+      'Pixel-perfect Figma to Webflow conversion',
+      'Dynamic CMS collections for blog, portfolio & team',
+      'Smooth scroll interactions & micro-animations',
+      'Clean semantic HTML/CSS & ultra-fast CDN loading'
+    ],
+    deliveryTime: '4-6 Days',
+    gigUrl: 'https://www.fiverr.com/phoebe_johnson/webflow-website-design-figma-and-website-development?ref_ctx_id=da6ec7ba96d745c0868d1262b870bef6&pckg_id=1&source=seller_page'
+  },
+  {
+    id: 'gig-website-seo-optimization',
+    title: 'Website SEO Optimization (Shopify, WordPress, Wix)',
+    category: 'SEO',
+    badge: 'On-Page & Tech',
+    rating: 4.9,
+    reviewsCount: '780+',
+    description: 'Complete On-Page and Technical SEO overhaul to boost Google visibility. Includes strategic keyword placement, meta tags, schema markup, image ALT optimization, and index fix.',
+    keyFeatures: [
+      'Comprehensive in-depth technical SEO audit',
+      'Title tags, meta descriptions & H1/H2 header tuning',
+      'Image compression, ALT tags & Google search console fix',
+      'Schema structured data & XML sitemap generation'
+    ],
+    deliveryTime: '2-4 Days',
+    gigUrl: 'https://www.fiverr.com/phoebe_johnson/website-seo-optimization-for-shopify-wordpress-wix?ref_ctx_id=da6ec7ba96d745c0868d1262b870bef6&pckg_id=1&source=seller_page',
+    popular: true
+  },
+  {
+    id: 'gig-seo-backlinks',
+    title: 'White Hat SEO Backlinks & Google Ranking (Dofollow)',
+    category: 'SEO',
+    badge: 'High DA Backlinks',
+    rating: 5.0,
+    reviewsCount: '650+',
+    description: 'High-authority contextual white-hat dofollow backlinks engineered to build domain authority, boost keyword rankings, and drive organic traffic safely and sustainably.',
+    keyFeatures: [
+      'High DA/DR authority contextual backlinks',
+      '100% white hat manual outreach & anchor text diversity',
+      'Permanent dofollow links safe from Google algorithm updates',
+      'Detailed Excel delivery report with all live backlink URLs'
+    ],
+    deliveryTime: '4-7 Days',
+    gigUrl: 'https://www.fiverr.com/phoebe_johnson/seo-backlinks-white-hat-off-page-build-dofollow-and-google-ranking?ref_ctx_id=da6ec7ba96d745c0868d1262b870bef6&pckg_id=1&source=seller_page'
+  }
+];
 
 export const HERO_STATS = [
   { value: '7,500+', label: 'Projects Completed', sub: 'Global eCommerce & Web Delivery' },

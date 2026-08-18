@@ -21,6 +21,7 @@ interface PlatformDetails {
   description: string;
   stats: { speed: string; loadTime: string; focus: string };
   deliverables: string[];
+  gigUrl: string;
   colorTheme: {
     primary: string;
     bg: string;
@@ -46,6 +47,7 @@ export default function Services() {
         'Mobile-first responsive UX with streamlined thumb-friendly navigation',
         'Optimized product page layouts with social proof and conversion hooks'
       ],
+      gigUrl: 'https://www.fiverr.com/phoebe_johnson/create-shopify-dropshipping-store?ref_ctx_id=a08d7f3fd26c4018a1be53fa64ef15ae&pckg_id=1&source=seller_page',
       colorTheme: {
         primary: 'bg-emerald-600',
         bg: 'bg-emerald-50/40',
@@ -66,6 +68,7 @@ export default function Services() {
         'Custom post types, advanced meta-queries, and dynamic service directories',
         'Comprehensive client training and custom documentation video guides'
       ],
+      gigUrl: 'https://www.fiverr.com/phoebe_johnson/build-website-for-your-wordpress-website-design?ref_ctx_id=da6ec7ba96d745c0868d1262b870bef6&pckg_id=1&source=seller_page',
       colorTheme: {
         primary: 'bg-blue-600',
         bg: 'bg-blue-50/40',
@@ -86,6 +89,7 @@ export default function Services() {
         'Custom javascript injections for tailored forms, calculators, and API states',
         'Lightning-fast CDN cloud hosting setup with zero maintenance overhead'
       ],
+      gigUrl: 'https://www.fiverr.com/phoebe_johnson/webflow-website-design-figma-and-website-development?ref_ctx_id=da6ec7ba96d745c0868d1262b870bef6&pckg_id=1&source=seller_page',
       colorTheme: {
         primary: 'bg-purple-600',
         bg: 'bg-purple-50/40',
@@ -106,6 +110,7 @@ export default function Services() {
         'Newsletter signups, client dashboard access, and social feed sync',
         'Complete visual-editor handoff requiring zero coding skills for daily updates'
       ],
+      gigUrl: 'https://www.fiverr.com/phoebe_johnson/website-seo-optimization-for-shopify-wordpress-wix?ref_ctx_id=da6ec7ba96d745c0868d1262b870bef6&pckg_id=1&source=seller_page',
       colorTheme: {
         primary: 'bg-cyan-600',
         bg: 'bg-cyan-50/40',
@@ -247,12 +252,12 @@ export default function Services() {
                     * Need custom third-party API configurations? Let me know in your request!
                   </div>
                   <a
-                    href="https://www.fiverr.com/phoebe_johnson"
+                    href={activePlatform.gigUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center py-2.5 px-5 rounded-full text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 transition-all shadow-md cursor-pointer self-start sm:self-center min-h-[44px]"
                   >
-                    <span>Inquire Profile</span>
+                    <span>Order {activePlatform.name.split(' ')[0]} Gig on Fiverr</span>
                     <ArrowUpRight className="ml-1.5 w-3.5 h-3.5" />
                   </a>
                 </div>
@@ -321,12 +326,12 @@ export default function Services() {
 
               <div className="mt-8 pt-4">
                 <a
-                  href="https://www.fiverr.com/phoebe_johnson"
+                  href="https://www.fiverr.com/phoebe_johnson/website-seo-optimization-for-shopify-wordpress-wix?ref_ctx_id=da6ec7ba96d745c0868d1262b870bef6&pckg_id=1&source=seller_page"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-xs font-bold text-blue-600 hover:text-blue-750 transition-colors duration-205"
                 >
-                  <span>Order Service Online</span>
+                  <span>Order SEO Gig on Fiverr</span>
                   <ArrowUpRight className="ml-1 w-3.5 h-3.5 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </a>
               </div>
@@ -371,12 +376,12 @@ export default function Services() {
 
               <div className="mt-8 pt-4">
                 <a
-                  href="https://www.fiverr.com/phoebe_johnson"
+                  href="https://www.fiverr.com/phoebe_johnson/seo-backlinks-white-hat-off-page-build-dofollow-and-google-ranking?ref_ctx_id=da6ec7ba96d745c0868d1262b870bef6&pckg_id=1&source=seller_page"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-xs font-bold text-blue-600 hover:text-blue-750 transition-colors duration-205"
                 >
-                  <span>Order Service Online</span>
+                  <span>Order Backlinks Gig on Fiverr</span>
                   <ArrowUpRight className="ml-1 w-3.5 h-3.5 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </a>
               </div>
@@ -421,17 +426,28 @@ export default function Services() {
 
               <div className="mt-8 pt-4">
                 <a
-                  href="https://www.fiverr.com/phoebe_johnson"
+                  href="https://www.fiverr.com/phoebe_johnson/shopify-website-design-shopify-design-shopify-store-shopify-redesign-shopify?ref_ctx_id=a08d7f3fd26c4018a1be53fa64ef15ae&pckg_id=1&source=seller_page"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-xs font-bold text-blue-600 hover:text-blue-750 transition-colors duration-205"
                 >
-                  <span>Order Service Online</span>
+                  <span>Order Redesign Gig on Fiverr</span>
                   <ArrowUpRight className="ml-1 w-3.5 h-3.5 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </a>
               </div>
             </div>
 
+          </div>
+
+          {/* Quick link to all Fiverr Gigs */}
+          <div className="mt-12 text-center">
+            <a
+              href="#fiverr-gigs"
+              className="inline-flex items-center space-x-2 px-6 py-3 rounded-full text-xs font-bold text-slate-800 bg-white hover:bg-slate-100 border border-slate-300 shadow-sm transition-all duration-200"
+            >
+              <span>Explore All 8 Verified Fiverr Service Gigs</span>
+              <ArrowUpRight className="w-3.5 h-3.5 text-blue-600" />
+            </a>
           </div>
         </div>
 

@@ -57,7 +57,12 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               <li>
-                <a href="#services" className="text-slate-500 hover:text-blue-605 text-slate-600 hover:text-blue-600 transition-colors">
+                <a href="#fiverr-gigs" className="text-blue-600 hover:text-blue-700 font-bold transition-colors">
+                  ★ Fiverr Gigs (8)
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="text-slate-600 hover:text-blue-600 transition-colors">
                   Web Design & Dev
                 </a>
               </li>

@@ -74,22 +74,25 @@ export default function StickyFiverrCTA() {
 
               <div className="flex items-center gap-2">
                 <a
-                  href="https://www.fiverr.com/phoebe_johnson"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center py-2.5 sm:py-2 px-4 rounded-xl text-xs sm:text-[11px] font-bold text-white bg-blue-600 hover:bg-blue-500 transition-all text-center shadow-md shadow-blue-600/20 active:scale-95"
-                  id="sticky-fiverr-order"
+                  href="#fiverr-gigs"
+                  onClick={() => setIsVisible(false)}
+                  className="flex-1 inline-flex items-center justify-center py-2.5 sm:py-2 px-3 rounded-xl text-xs sm:text-[11px] font-bold text-white bg-blue-600 hover:bg-blue-500 transition-all text-center shadow-md shadow-blue-600/20 active:scale-95 cursor-pointer"
+                  id="sticky-fiverr-gigs"
                 >
-                  <span>View Profile</span>
-                  <ArrowUpRight className="ml-1.5 w-3.5 h-3.5" />
+                  <span>View 8 Gigs</span>
+                  <ArrowUpRight className="ml-1 w-3.5 h-3.5" />
                 </a>
                 
                 <a
-                  href="#contact"
-                  className="inline-flex items-center justify-center p-2.5 sm:p-2 rounded-xl text-xs sm:text-[11px] font-semibold text-slate-300 bg-slate-950 hover:bg-slate-800 border border-slate-800 transition-all min-w-[40px] min-h-[40px]"
-                  title="Ask a Question"
+                  href="https://www.fiverr.com/phoebe_johnson"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center py-2.5 sm:py-2 px-3 rounded-xl text-xs sm:text-[11px] font-semibold text-slate-200 bg-slate-800 hover:bg-slate-700 border border-slate-700 transition-all"
+                  title="Fiverr Profile"
+                  id="sticky-fiverr-order"
                 >
-                  <ExternalLink className="w-4 h-4 sm:w-3.5 sm:h-3.5" />
+                  <span>Profile</span>
+                  <ExternalLink className="ml-1 w-3 h-3" />
                 </a>
               </div>
             </div>

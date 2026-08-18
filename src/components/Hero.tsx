@@ -95,13 +95,11 @@ export default function Hero() {
             className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-md sm:max-w-none mx-auto"
           >
             <a
-              href="https://www.fiverr.com/phoebe_johnson"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#fiverr-gigs"
               className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-200 active:scale-95 transition-all duration-300 min-h-[48px]"
-              id="hero-fiverr"
+              id="hero-fiverr-gigs"
             >
-              <span>Hire Me Online</span>
+              <span>Explore 8 Verified Gigs</span>
               <ArrowUpRight className="ml-2 w-4 h-4" />
             </a>
             <a
@@ -110,6 +108,15 @@ export default function Hero() {
               id="hero-portfolio"
             >
               <span>View Portfolio</span>
+            </a>
+            <a
+              href="https://www.fiverr.com/phoebe_johnson"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full text-sm font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 border border-slate-200 active:scale-95 transition-all duration-300 min-h-[48px]"
+              id="hero-fiverr"
+            >
+              <span>Fiverr Profile</span>
             </a>
           </motion.div>
 

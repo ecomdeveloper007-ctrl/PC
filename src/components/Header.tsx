@@ -21,6 +21,7 @@ export default function Header() {
   const navLinks = [
     { label: 'About', href: '#about' },
     { label: 'Services', href: '#services' },
+    { label: 'Fiverr Gigs', href: '#fiverr-gigs' },
     { label: 'Portfolio', href: '#portfolio' },
     { label: 'AI Search', href: '#ai-search' },
     { label: 'Process', href: '#process' },

@@ -54,3 +54,17 @@ export interface Feature {
   title: string;
   description: string;
 }
+
+export interface FiverrGig {
+  id: string;
+  title: string;
+  category: 'Shopify' | 'WordPress' | 'Webflow' | 'SEO';
+  badge: string;
+  rating: number;
+  reviewsCount: string;
+  description: string;
+  keyFeatures: string[];
+  gigUrl: string;
+  deliveryTime: string;
+  popular?: boolean;
+}
