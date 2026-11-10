@@ -24,6 +24,7 @@ export default function Header() {
     { label: 'Fiverr Gigs', href: '#fiverr-gigs' },
     { label: 'Portfolio', href: '#portfolio' },
     { label: 'AI Search', href: '#ai-search' },
+    { label: 'SEO Services', href: '#seo-services' },
     { label: 'Process', href: '#process' },
     { label: 'Contact', href: '#contact' },
   ];

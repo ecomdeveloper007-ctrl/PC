@@ -67,8 +67,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-slate-500 hover:text-blue-605 text-slate-600 hover:text-blue-600 transition-colors">
-                  Technical SEO Audit
+                <a href="#seo-services" className="text-slate-600 hover:text-blue-600 transition-colors">
+                  SEO Services & Audits
                 </a>
               </li>
               <li>

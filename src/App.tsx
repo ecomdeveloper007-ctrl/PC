@@ -10,6 +10,7 @@ import Services from './components/Services';
 import FiverrGigs from './components/FiverrGigs';
 import Portfolio from './components/Portfolio';
 import GeoAeoPortfolio from './components/GeoAeoPortfolio';
+import SEOServices from './components/SEOServices';
 import Testimonials from './components/Testimonials';
 import Features from './components/Features';
 import Process from './components/Process';
@@ -32,6 +33,7 @@ export default function App() {
         <FiverrGigs />
         <Portfolio />
         <GeoAeoPortfolio />
+        <SEOServices />
         <Testimonials />
         <Features />
         <Process />
