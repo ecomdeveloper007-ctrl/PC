@@ -79,17 +79,17 @@ export default function Portfolio() {
             <button
               key={flt}
               onClick={() => setSelectedFilter(flt)}
-              className={`px-5 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all duration-300 cursor-pointer ${
+              className={`px-5 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all duration-300 cursor-pointer min-h-[40px] ${
                 selectedFilter === flt
-                  ? 'bg-blue-600 text-white shadow-md shadow-blue-100'
-                  : 'bg-slate-50 text-slate-650 hover:text-slate-905 hover:bg-slate-100 border border-slate-200'
+                  ? 'bg-slate-900 text-white shadow-md'
+                  : 'bg-slate-50 text-slate-650 hover:text-slate-900 hover:bg-slate-100 border border-slate-200'
               }`}
             >
               {flt}
-              <span className={`ml-1.5 px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold transition-colors ${
+              <span className={`ml-2 px-2 py-0.5 rounded-full text-[10px] font-mono font-bold transition-colors ${
                 selectedFilter === flt
-                  ? 'bg-blue-700/50 text-blue-100'
-                  : 'bg-slate-200/60 text-slate-600'
+                  ? 'bg-slate-700 text-slate-200'
+                  : 'bg-slate-200/80 text-slate-600'
               }`}>
                 {flt === 'All'
                   ? PORTFOLIO_PROJECTS.length
@@ -115,63 +115,44 @@ export default function Portfolio() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.3 }}
-                  className="group relative rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-sm hover:shadow-md hover:border-blue-500/40 transition-all duration-300"
+                  className="group relative rounded-3xl bg-white border border-slate-200/90 overflow-hidden shadow-xs hover:shadow-[0_16px_40px_rgba(0,0,0,0.08)] hover:border-blue-400/50 hover:-translate-y-1 transition-all duration-300"
                 >
                   {/* Thumbnail Cover container */}
-                  <div className="relative aspect-[16/10] overflow-hidden bg-slate-50 border-b border-slate-200">
+                  <div 
+                    onClick={() => openLightbox(index)}
+                    className="relative aspect-[16/10] overflow-hidden bg-slate-50 border-b border-slate-100 cursor-pointer"
+                  >
                     <img
                       src={project.imageUrl}
                       alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                       referrerPolicy="no-referrer"
                     />
-                    {/* Hover Dim Overlay with Quick Preview triggers */}
-                    <div className="absolute inset-0 bg-slate-950/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-3">
-                      <button
-                        onClick={() => openLightbox(index)}
-                        className="p-3 rounded-full bg-blue-600 text-white hover:bg-blue-500 hover:scale-110 active:scale-95 transition-all text-xs font-semibold flex items-center space-x-1.5 shadow-lg cursor-pointer"
-                        title="Quick View Details"
-                      >
-                        <Eye className="w-4 h-4" />
-                        <span>Inspect</span>
-                      </button>
-                      <a
-                        href={project.websiteUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                        className="p-3 rounded-full bg-slate-800 text-slate-200 hover:bg-slate-700 hover:scale-110 active:scale-95 transition-all text-xs font-semibold flex items-center space-x-1.5 shadow-lg"
-                        title="Visit Live Site"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                        <span>Visit</span>
-                      </a>
-                    </div>
                   </div>
 
                   {/* Body Info */}
                   <div className="p-6">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="font-mono text-[9px] font-bold text-blue-600 uppercase tracking-widest bg-blue-50 px-20 px-2 py-0.5 rounded border border-blue-100">
+                    <div className="flex items-center justify-between mb-2.5">
+                      <span className="font-mono text-[9px] font-bold text-blue-700 uppercase tracking-widest bg-blue-50 px-2.5 py-1 rounded-md border border-blue-100">
                         {project.platform}
                       </span>
-                      <span className="text-[10px] text-slate-500 font-bold">
+                      <span className="text-[11px] text-slate-500 font-semibold">
                         {project.industry}
                       </span>
                     </div>
 
                     <h3
                       onClick={() => openLightbox(index)}
-                      className="font-display font-bold text-slate-900 text-base hover:text-blue-600 transition-colors cursor-pointer line-clamp-1"
+                      className="font-display font-extrabold text-slate-900 text-base hover:text-blue-600 transition-colors cursor-pointer line-clamp-1"
                     >
                       {project.title}
                     </h3>
 
                     {/* Visit / Info link button */}
-                    <div className="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between">
+                    <div className="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
                       <button
                         onClick={() => openLightbox(index)}
-                        className="text-xs text-slate-500 hover:text-slate-900 transition-colors font-semibold cursor-pointer"
+                        className="text-slate-500 hover:text-blue-600 transition-colors font-semibold cursor-pointer"
                       >
                         View Project Scope
                       </button>
@@ -179,10 +160,10 @@ export default function Portfolio() {
                         href={project.websiteUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-xs font-bold text-blue-600 hover:text-blue-700 transition-colors"
+                        className="inline-flex items-center font-bold text-blue-600 hover:text-blue-700 transition-colors group/link"
                       >
                         <span>Visit Website</span>
-                        <ArrowUpRight className="ml-1 w-3.5 h-3.5" />
+                        <ArrowUpRight className="ml-1 w-3.5 h-3.5 transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
                       </a>
                     </div>
                   </div>

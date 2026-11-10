@@ -35,25 +35,30 @@ export default function DashboardMetrics() {
         </div>
 
         {/* Core Stats numerical cells */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-12">
           {mainMetrics.map((met) => (
             <div
               key={met.label}
-              className="p-5 rounded-2xl bg-slate-50 border border-slate-205 hover:border-slate-300 transition-colors shadow-sm hover:shadow-md animate-fade-in"
+              className="relative overflow-hidden p-6 rounded-3xl bg-slate-50/80 border border-slate-200/90 hover:border-blue-400 hover:bg-white hover:shadow-[0_12px_32px_rgba(0,0,0,0.06)] hover:-translate-y-0.5 transition-all duration-300 group"
             >
-              <div className="flex items-center justify-between mb-3 text-slate-500">
-                {met.icon}
-                <span className="text-[8px] font-mono font-bold uppercase tracking-widest bg-white text-blue-600 border border-slate-200 px-1.5 py-0.5 rounded shadow-sm">
+              {/* Top hover indicator */}
+              <div className="absolute top-0 left-0 w-full h-[2px] bg-linear-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+              <div className="flex items-center justify-between mb-4 text-slate-500">
+                <div className="p-2.5 rounded-xl bg-white border border-slate-200/80 shadow-2xs group-hover:scale-105 transition-transform">
+                  {met.icon}
+                </div>
+                <span className="text-[9px] font-mono font-bold uppercase tracking-widest bg-white text-blue-700 border border-blue-100 px-2 py-0.5 rounded-md shadow-2xs">
                   Live Verify
                 </span>
               </div>
-              <h3 className="font-display text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight font-mono">
+              <h3 className="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight font-mono group-hover:text-blue-600 transition-colors">
                 {met.value}
               </h3>
-              <p className="text-[11px] font-bold text-slate-805 mt-1">
+              <p className="text-xs font-bold text-slate-800 mt-1.5">
                 {met.label}
               </p>
-              <p className="text-[10px] text-slate-500 mt-1 leading-normal font-semibold">
+              <p className="text-[11px] text-slate-500 mt-1 leading-normal font-medium">
                 {met.desc}
               </p>
             </div>

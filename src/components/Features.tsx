@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { Check, ShieldCheck, HelpCircle, ArrowUpRight } from 'lucide-react';
+import { Check } from 'lucide-react';
 import { WHY_CHOOSE_ME } from '../data';
 
 export default function Features() {
@@ -32,25 +32,25 @@ export default function Features() {
           {WHY_CHOOSE_ME.map((feat) => (
             <div
               key={feat.title}
-              className="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-500/30 hover:shadow-sm transition-all duration-300 flex flex-col justify-between group"
+              className="p-6 rounded-3xl bg-slate-50/70 border border-slate-200/90 hover:border-blue-400/60 hover:bg-white hover:shadow-[0_12px_32px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
             >
               <div className="space-y-4">
-                <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold">
-                  <Check className="w-4 h-4 text-blue-650 group-hover:scale-110 transition-transform" />
+                <div className="w-10 h-10 rounded-2xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center font-bold shadow-2xs group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                  <Check className="w-5 h-5 transition-transform" />
                 </div>
                 
                 <div>
-                  <h3 className="text-sm font-bold text-slate-900 tracking-tight">
+                  <h3 className="text-sm font-extrabold text-slate-900 tracking-tight group-hover:text-blue-600 transition-colors">
                     {feat.title}
                   </h3>
-                  <p className="mt-1.5 text-[11px] leading-relaxed text-slate-600 font-medium">
+                  <p className="mt-2 text-xs leading-relaxed text-slate-650 font-medium">
                     {feat.description}
                   </p>
                 </div>
               </div>
 
-              <div className="mt-6 pt-3 border-t border-slate-200">
-                <span className="text-[9px] font-mono font-bold text-blue-600 tracking-wider flex items-center uppercase">
+              <div className="mt-6 pt-3.5 border-t border-slate-200/80">
+                <span className="text-[10px] font-mono font-bold text-blue-700 tracking-wider flex items-center uppercase">
                   Verified Status ✓
                 </span>
               </div>
@@ -58,20 +58,7 @@ export default function Features() {
           ))}
         </div>
 
-        {/* Action Bottom Block */}
-        <div className="mt-16 text-center border-t border-slate-200 pt-12">
-          <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-200/80 shadow-sm max-w-3xl mx-auto">
-            <span className="text-xs text-slate-600 text-left font-medium leading-relaxed">
-              💼 Need an instant customized proposal or custom project timelines? Submit your catalog coordinates.
-            </span>
-            <a
-              href="#contact"
-              className="px-6 py-2.5 rounded-full text-xs font-extrabold text-white bg-slate-905 bg-slate-900 hover:bg-slate-800 transition-colors whitespace-nowrap shadow-sm"
-            >
-              Get Started Now
-            </a>
-          </div>
-        </div>
+
 
       </div>
     </section>

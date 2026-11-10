@@ -55,38 +55,39 @@ export default function Testimonials() {
         </div>
 
         {/* Global Rating Score Banner */}
+        {/* Global Rating Score Banner */}
         <div className="mb-12 sm:mb-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          <div className="p-4 sm:p-6 rounded-2xl bg-white border border-slate-200 flex items-center space-x-3.5 sm:space-x-4 shadow-sm">
-            <div className="p-2.5 sm:p-3 rounded-xl bg-amber-500/10 text-amber-500 shrink-0">
-              <Star className="w-6 h-6 sm:w-8 sm:h-8 fill-amber-500" />
+          <div className="p-6 rounded-3xl bg-white border border-slate-200/90 flex items-center space-x-4 shadow-xs hover:shadow-sm transition-all">
+            <div className="p-3.5 rounded-2xl bg-amber-500/10 text-amber-500 shrink-0">
+              <Star className="w-7 h-7 fill-amber-500" />
             </div>
             <div>
-              <span className="text-2xl sm:text-3xl font-extrabold text-slate-900">4.9 / 5.0</span>
-              <p className="text-[10px] sm:text-xs text-slate-500 font-bold mt-0.5 uppercase tracking-wide">
+              <span className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-display">4.9 / 5.0</span>
+              <p className="text-[10px] sm:text-xs text-slate-500 font-bold mt-0.5 uppercase tracking-wide font-mono">
                 Average Customer Satisfaction
               </p>
             </div>
           </div>
 
-          <div className="p-4 sm:p-6 rounded-2xl bg-white border border-slate-200 flex items-center space-x-3.5 sm:space-x-4 shadow-sm">
-            <div className="p-2.5 sm:p-3 rounded-xl bg-blue-500/10 text-blue-600 shrink-0">
-              <Award className="w-6 h-6 sm:w-8 sm:h-8 font-bold" />
+          <div className="p-6 rounded-3xl bg-white border border-slate-200/90 flex items-center space-x-4 shadow-xs hover:shadow-sm transition-all">
+            <div className="p-3.5 rounded-2xl bg-blue-500/10 text-blue-600 shrink-0">
+              <Award className="w-7 h-7 font-bold" />
             </div>
             <div>
-              <span className="text-2xl sm:text-3xl font-extrabold text-slate-900">4,500+</span>
-              <p className="text-[10px] sm:text-xs text-slate-500 font-bold mt-0.5 uppercase tracking-wide">
+              <span className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-display">4,500+</span>
+              <p className="text-[10px] sm:text-xs text-slate-500 font-bold mt-0.5 uppercase tracking-wide font-mono">
                 Verified Global Reviews
               </p>
             </div>
           </div>
 
-          <div className="p-4 sm:p-6 rounded-2xl bg-white border border-slate-200 flex items-center space-x-3.5 sm:space-x-4 shadow-sm sm:col-span-2 lg:col-span-1">
-            <div className="p-2.5 sm:p-3 rounded-xl bg-cyan-500/10 text-cyan-600 shrink-0">
-              <ShieldCheck className="w-6 h-6 sm:w-8 sm:h-8 font-bold" />
+          <div className="p-6 rounded-3xl bg-white border border-slate-200/90 flex items-center space-x-4 shadow-xs hover:shadow-sm transition-all sm:col-span-2 lg:col-span-1">
+            <div className="p-3.5 rounded-2xl bg-cyan-500/10 text-cyan-600 shrink-0">
+              <ShieldCheck className="w-7 h-7 font-bold" />
             </div>
             <div>
-              <span className="text-xl sm:text-2xl font-extrabold text-slate-900">Elite Specialist</span>
-              <p className="text-[10px] sm:text-xs text-slate-500 font-bold mt-0.5 uppercase tracking-wide">
+              <span className="text-xl sm:text-2xl font-extrabold text-slate-900 font-display">Elite Specialist</span>
+              <p className="text-[10px] sm:text-xs text-slate-500 font-bold mt-0.5 uppercase tracking-wide font-mono">
                 Verified top-tier consultant
               </p>
             </div>
@@ -94,7 +95,7 @@ export default function Testimonials() {
         </div>
 
         {/* Category Tabs for Review selection */}
-        <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mb-10 sm:mb-12 border-b border-slate-200 pb-5 sm:pb-6">
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-10 sm:mb-12 border-b border-slate-200/80 pb-6">
           {(['All', 'Shopify', 'WordPress & Webflow', 'Local business & SEO'] as const).map((cat) => (
             <button
               key={cat}
@@ -102,10 +103,10 @@ export default function Testimonials() {
                 setActiveCategory(cat);
                 setActiveIndex(0);
               }}
-              className={`px-3 sm:px-4 py-2 rounded-lg text-xs font-bold tracking-wide transition-colors cursor-pointer min-h-[38px] ${
+              className={`px-4 py-2 rounded-full text-xs font-bold tracking-wide transition-all cursor-pointer min-h-[38px] ${
                 activeCategory === cat
-                  ? 'bg-blue-600 text-white shadow-sm'
-                  : 'bg-white text-slate-600 hover:text-slate-900 border border-slate-200'
+                  ? 'bg-slate-900 text-white shadow-sm'
+                  : 'bg-white text-slate-650 hover:text-slate-900 hover:bg-slate-100 border border-slate-200'
               }`}
             >
               {cat}
@@ -116,36 +117,36 @@ export default function Testimonials() {
         {/* Testimonial Active Display Slide */}
         <div className="max-w-4xl mx-auto">
           {currentReview ? (
-            <div className="relative rounded-3xl bg-white border border-slate-200 p-6 sm:p-12 shadow-sm">
-              <span className="absolute top-4 right-6 sm:top-6 sm:right-8 text-slate-100/70 pointer-events-none">
-                <Quote className="w-16 h-16 sm:w-24 sm:h-24 stroke-[1.5]" />
+            <div className="relative rounded-3xl bg-white border border-slate-200/90 p-8 sm:p-14 shadow-sm hover:shadow-md transition-all">
+              <span className="absolute top-6 right-8 sm:top-8 sm:right-12 text-slate-100 pointer-events-none">
+                <Quote className="w-20 h-20 sm:w-28 sm:h-28 stroke-[1.2]" />
               </span>
 
-              <div className="relative z-10 space-y-5 sm:space-y-6">
+              <div className="relative z-10 space-y-6">
                 
                 {/* 5 stars rating */}
-                <div className="flex gap-1 text-amber-500">
+                <div className="flex gap-1 text-amber-400">
                   {Array.from({ length: currentReview.rating }).map((_, i) => (
-                    <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-amber-500 font-bold" />
+                    <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-amber-400" />
                   ))}
                 </div>
 
                 {/* Review Message Text */}
-                <p className="font-sans text-sm sm:text-base md:text-lg text-slate-700 leading-relaxed italic font-semibold">
+                <p className="font-sans text-base sm:text-lg md:text-xl text-slate-750 leading-relaxed italic font-medium">
                   "{currentReview.review}"
                 </p>
 
                 {/* Account Details Footer card */}
-                <div className="pt-5 sm:pt-6 border-t border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div className="pt-6 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   <div className="flex items-center space-x-3.5">
                     <img
                       src={currentReview.avatarUrl}
                       alt={currentReview.name}
-                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-blue-500/20 shadow-sm shrink-0"
+                      className="w-12 h-12 rounded-full object-cover ring-2 ring-blue-500/20 shadow-sm shrink-0"
                       referrerPolicy="no-referrer"
                     />
                     <div>
-                      <h4 className="text-xs sm:text-sm font-extrabold text-slate-900">
+                      <h4 className="text-sm font-extrabold text-slate-900">
                         {currentReview.name}
                       </h4>
                       <p className="text-[11px] sm:text-xs text-slate-500 font-bold">

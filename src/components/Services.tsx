@@ -163,10 +163,10 @@ export default function Services() {
           </div>
 
           {/* Interactive Showcase Layout */}
-          <div className="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden p-5 sm:p-8 lg:p-10">
+          <div className="bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-md transition-all overflow-hidden p-6 sm:p-8 lg:p-10">
             
             {/* Horizontal Platform Selector Tab List */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8 bg-slate-50/50 p-1.5 sm:p-2 rounded-2xl border border-slate-200">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8 bg-slate-100/70 p-1.5 sm:p-2 rounded-2xl border border-slate-200/80">
               {Object.keys(platforms).map((key) => (
                 <button
                   key={key}
@@ -174,7 +174,7 @@ export default function Services() {
                   className={`flex items-center justify-center space-x-2 sm:space-x-2.5 py-3 sm:py-3.5 px-3 sm:px-4 rounded-xl text-xs font-extrabold tracking-wide transition-all duration-300 cursor-pointer min-h-[44px] ${
                     activeTab === key
                       ? 'bg-slate-900 text-white shadow-md'
-                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                      : 'text-slate-600 hover:text-slate-900 hover:bg-white/80'
                   }`}
                 >
                   <Laptop className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ${activeTab === key ? 'text-blue-400' : 'text-slate-400'}`} />
@@ -194,14 +194,14 @@ export default function Services() {
                     <span>Specialized Platform Delivery</span>
                   </div>
                   
-                  <h4 className="font-display text-xl sm:text-2xl font-black text-slate-900 leading-snug">
+                  <h4 className="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 leading-snug">
                     {activePlatform.name}
                   </h4>
                   <p className="font-sans text-xs sm:text-sm text-blue-600 font-extrabold mt-1 tracking-wide uppercase">
                     {activePlatform.tagline}
                   </p>
                   
-                  <p className="mt-3 sm:mt-4 text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                  <p className="mt-3 sm:mt-4 text-xs sm:text-sm text-slate-650 leading-relaxed font-medium">
                     {activePlatform.description}
                   </p>
                 </div>
@@ -211,34 +211,34 @@ export default function Services() {
                   <h5 className="text-[10px] font-mono font-bold uppercase tracking-widest text-slate-400 mb-3 sm:mb-4 block">
                     Verified Performance Delivery
                   </h5>
-                  <div className="grid grid-cols-3 gap-2 sm:gap-3">
-                    <div className="bg-slate-50 border border-slate-200 rounded-2xl p-3 sm:p-4 text-center">
+                  <div className="grid grid-cols-3 gap-2.5 sm:gap-3">
+                    <div className="bg-slate-50/90 border border-slate-200/90 rounded-2xl p-3 sm:p-4 text-center hover:bg-white hover:shadow-xs transition-all">
                       <span className="text-[8px] sm:text-[9px] font-mono font-bold text-slate-500 uppercase block">PageSpeed</span>
-                      <span className="text-base sm:text-lg font-black text-slate-900 tracking-tight block mt-0.5">{activePlatform.stats.speed}</span>
+                      <span className="text-base sm:text-xl font-extrabold text-slate-900 tracking-tight block mt-0.5">{activePlatform.stats.speed}</span>
                     </div>
-                    <div className="bg-slate-50 border border-slate-200 rounded-2xl p-3 sm:p-4 text-center">
+                    <div className="bg-slate-50/90 border border-slate-200/90 rounded-2xl p-3 sm:p-4 text-center hover:bg-white hover:shadow-xs transition-all">
                       <span className="text-[8px] sm:text-[9px] font-mono font-bold text-slate-500 uppercase block">Load Time</span>
-                      <span className="text-base sm:text-lg font-black text-slate-900 tracking-tight block mt-0.5">{activePlatform.stats.loadTime}</span>
+                      <span className="text-base sm:text-xl font-extrabold text-slate-900 tracking-tight block mt-0.5">{activePlatform.stats.loadTime}</span>
                     </div>
-                    <div className="bg-slate-50 border border-slate-200 rounded-2xl p-3 sm:p-4 text-center">
+                    <div className="bg-slate-50/90 border border-slate-200/90 rounded-2xl p-3 sm:p-4 text-center hover:bg-white hover:shadow-xs transition-all">
                       <span className="text-[8px] sm:text-[9px] font-mono font-bold text-slate-500 uppercase block">Core Focus</span>
-                      <span className="text-[9px] sm:text-[10px] font-black text-slate-900 leading-tight block mt-1 uppercase break-words">{activePlatform.stats.focus}</span>
+                      <span className="text-[9px] sm:text-[10px] font-black text-blue-600 leading-tight block mt-1 uppercase break-words">{activePlatform.stats.focus}</span>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Right Side: Detailed Deliverables Checklist */}
-              <div className="lg:col-span-7 bg-slate-50/50 rounded-2xl border border-slate-200 p-5 sm:p-8 flex flex-col justify-between">
+              <div className="lg:col-span-7 bg-slate-50/70 rounded-3xl border border-slate-200/80 p-6 sm:p-8 flex flex-col justify-between">
                 <div>
                   <h4 className="font-display text-xs font-bold text-slate-900 uppercase tracking-widest flex items-center gap-2 mb-4 sm:mb-6 border-b border-slate-200/60 pb-3">
                     <Settings2 className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-blue-600" />
                     <span>Included Scope of Work</span>
                   </h4>
-                  <ul className="space-y-3 sm:space-y-4">
+                  <ul className="space-y-3 sm:space-y-3.5">
                     {activePlatform.deliverables.map((item, idx) => (
-                      <li key={idx} className="flex items-start text-xs sm:text-sm text-slate-650 leading-relaxed font-semibold">
-                        <div className="mr-3 shrink-0 mt-0.5 p-0.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100">
+                      <li key={idx} className="flex items-start text-xs sm:text-sm text-slate-700 leading-relaxed font-semibold">
+                        <div className="mr-3 shrink-0 mt-0.5 p-1 rounded-full bg-blue-50 text-blue-600 border border-blue-100">
                           <CheckCircle className="w-3.5 h-3.5" />
                         </div>
                         <span>{item}</span>
@@ -248,17 +248,17 @@ export default function Services() {
                 </div>
 
                 <div className="mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-slate-200/60 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                  <div className="text-[11px] text-slate-500 font-bold">
+                  <div className="text-[11px] text-slate-500 font-semibold">
                     * Need custom third-party API configurations? Let me know in your request!
                   </div>
                   <a
                     href={activePlatform.gigUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center py-2.5 px-5 rounded-full text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 transition-all shadow-md cursor-pointer self-start sm:self-center min-h-[44px]"
+                    className="inline-flex items-center justify-center py-2.5 px-6 rounded-full text-xs font-bold text-white bg-linear-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 transition-all shadow-md shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/30 cursor-pointer self-start sm:self-center min-h-[44px] group"
                   >
                     <span>Order {activePlatform.name.split(' ')[0]} Gig on Fiverr</span>
-                    <ArrowUpRight className="ml-1.5 w-3.5 h-3.5" />
+                    <ArrowUpRight className="ml-1.5 w-3.5 h-3.5 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </a>
                 </div>
               </div>

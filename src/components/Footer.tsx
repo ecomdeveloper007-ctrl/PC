@@ -22,17 +22,21 @@ export default function Footer() {
           
           {/* Brand Col */}
           <div className="md:col-span-4 space-y-6">
-            <a href="#" className="flex items-center space-x-2 group">
-              <div className="relative flex items-center justify-center w-10 h-10 rounded-lg bg-blue-600 shadow-[0_4px_12px_rgba(37,99,235,0.15)]">
-                <span className="font-display font-bold text-white text-lg">PJ</span>
+            <a href="#" className="flex items-center space-x-2.5 group">
+              <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-linear-to-br from-blue-600 to-indigo-600 text-white shadow-md shadow-blue-500/20 group-hover:scale-105 transition-all">
+                <span className="font-display font-black text-white text-base tracking-wider">PJ</span>
+                <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-white"></span>
               </div>
               <div className="flex flex-col">
-                <span className="font-display tracking-tight font-bold text-slate-900 text-base leading-none">PJ</span>
-                <span className="font-mono text-[9px] text-blue-600 font-bold tracking-widest mt-0.5 uppercase">Digital Architect</span>
+                <div className="flex items-center space-x-1.5">
+                  <span className="font-display tracking-tight font-extrabold text-slate-900 text-base leading-none group-hover:text-blue-600 transition-colors">PJ</span>
+                  <span className="text-[10px] font-mono px-1.5 py-0.5 rounded-md bg-blue-50 text-blue-700 font-bold border border-blue-100">PRO</span>
+                </div>
+                <span className="font-mono text-[9px] text-slate-500 font-bold tracking-widest mt-0.5 uppercase">Digital Architect</span>
               </div>
             </a>
             
-            <p className="text-xs text-slate-600 leading-relaxed font-semibold">
+            <p className="text-xs text-slate-650 leading-relaxed font-medium">
               Helping eCommerce stores and services scale through customized Shopify layouts, advanced Technical SEO, and Answer Engine Visibility optimizations. Based in Virginia, US.
             </p>
 
@@ -42,7 +46,7 @@ export default function Footer() {
                 href="https://www.fiverr.com/phoebe_johnson"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 text-slate-600 hover:text-blue-600 flex items-center justify-center transition-all duration-300 shadow-sm"
+                className="w-10 h-10 rounded-xl bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 text-slate-700 hover:text-blue-600 flex items-center justify-center transition-all duration-300 shadow-2xs hover:scale-105"
                 title="Fiverr Profile URL"
               >
                 <span className="font-display font-bold text-xs uppercase font-mono">FI</span>
@@ -143,22 +147,22 @@ export default function Footer() {
           </div>
 
           {/* Order Channel */}
-          <div className="md:col-span-2 space-y-4 font-semibold">
-            <h4 className="text-xs text-slate-905 text-slate-900 font-extrabold uppercase tracking-wider font-mono">
+          <div className="md:col-span-2 space-y-4 font-semibold p-5 rounded-2xl bg-slate-50/80 border border-slate-200/90 shadow-2xs">
+            <h4 className="text-xs text-slate-900 font-extrabold uppercase tracking-wider font-mono">
               Verified Order Flow
             </h4>
-            <p className="text-[11px] text-slate-500 leading-normal font-bold">
+            <p className="text-[11px] text-slate-550 leading-normal font-medium">
               Proceed securely via my official profile.
             </p>
             <a
               href="https://www.fiverr.com/phoebe_johnson"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-[11px] font-bold rounded-lg transition-all shadow-sm w-full text-center cursor-pointer"
+              className="inline-flex items-center justify-center px-4 py-2.5 bg-linear-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-[11px] font-bold rounded-xl transition-all shadow-md shadow-blue-500/20 w-full text-center cursor-pointer group"
               id="footer-fiverr-link"
             >
               <span>Official Profile</span>
-              <ArrowUpRight className="ml-1.5 w-3 h-3 text-white" />
+              <ArrowUpRight className="ml-1.5 w-3 h-3 text-white transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
           </div>
 
@@ -178,7 +182,7 @@ export default function Footer() {
           {/* Scroll Up Button */}
           <button
             onClick={scrollUp}
-            className="p-3 rounded-full bg-slate-50 hover:bg-blue-600 hover:text-white border border-slate-202 border-slate-200 hover:border-blue-500 text-slate-600 hover:shadow-lg transition-all duration-300 cursor-pointer"
+            className="p-3 rounded-2xl bg-slate-50 hover:bg-blue-600 hover:text-white border border-slate-200 hover:border-blue-500 text-slate-600 hover:shadow-lg transition-all duration-300 cursor-pointer shadow-2xs hover:-translate-y-0.5 active:scale-95"
             aria-label="Back to top"
             id="back-to-top-footer"
           >

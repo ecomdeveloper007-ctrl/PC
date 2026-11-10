@@ -30,7 +30,7 @@ export default function Process() {
         {/* Process Timeline Blocks */}
         <div className="relative mt-8">
           {/* Connector timeline indicator line */}
-          <div className="hidden lg:block absolute left-4 right-4 top-[40px] h-[2px] bg-slate-200 z-0"></div>
+          <div className="hidden lg:block absolute left-8 right-8 top-[32px] h-[3px] bg-linear-to-r from-blue-500/20 via-blue-500/40 to-indigo-500/20 z-0"></div>
 
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 relative z-10 items-stretch">
             {TIMELINE_PROCESS.map((proc, idx) => (
@@ -40,21 +40,21 @@ export default function Process() {
                 <div className="flex lg:flex-col items-center gap-4 lg:gap-0 lg:items-start shrink-0">
                   
                   {/* Glowing bubble number identifier */}
-                  <div className="w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] rounded-2xl bg-white border border-slate-200 flex items-center justify-center font-display font-black text-slate-800 text-base sm:text-lg group-hover:border-blue-650 group-hover:bg-blue-50 group-hover:text-blue-605 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.15)] transition-all duration-300 relative z-10 shrink-0 shadow-sm">
+                  <div className="w-[52px] h-[52px] sm:w-[64px] sm:h-[64px] rounded-2xl bg-white border border-slate-200/90 flex items-center justify-center font-display font-extrabold text-slate-900 text-lg sm:text-xl group-hover:border-blue-500 group-hover:bg-blue-600 group-hover:text-white group-hover:shadow-[0_8px_24px_rgba(37,99,235,0.25)] transition-all duration-300 relative z-10 shrink-0 shadow-xs">
                     {idx + 1}
                   </div>
 
-                  <span className="lg:mt-4 font-mono text-[10px] font-bold text-blue-600 uppercase tracking-widest bg-blue-50 border border-blue-205 px-2 py-0.5 rounded shadow-sm">
+                  <span className="lg:mt-4 font-mono text-[10px] font-bold text-blue-700 uppercase tracking-widest bg-blue-50 border border-blue-100 px-2.5 py-1 rounded-md shadow-2xs">
                     {proc.step}
                   </span>
                 </div>
 
                 {/* Content Block */}
-                <div className="p-6 rounded-2xl bg-white border border-slate-200 group-hover:border-blue-500/20 transition-all duration-300 shadow-sm hover:shadow-md flex-1 flex flex-col justify-start">
-                  <h3 className="font-display text-base sm:text-lg font-bold text-slate-900 group-hover:text-blue-650 transition-colors">
+                <div className="p-6 rounded-3xl bg-white border border-slate-200/90 group-hover:border-blue-400/50 transition-all duration-300 shadow-xs hover:shadow-[0_12px_32px_rgba(0,0,0,0.06)] hover:-translate-y-0.5 flex-1 flex flex-col justify-start">
+                  <h3 className="font-display text-base sm:text-lg font-extrabold text-slate-900 group-hover:text-blue-600 transition-colors">
                     {proc.title}
                   </h3>
-                  <p className="mt-2.5 text-xs text-slate-600 leading-relaxed font-semibold">
+                  <p className="mt-2.5 text-xs text-slate-650 leading-relaxed font-semibold">
                     {proc.description}
                   </p>
                 </div>

@@ -13,7 +13,6 @@ import {
   ShoppingCart, 
   Key, 
   Sparkles, 
-  Bot, 
   BarChart3, 
   CheckCircle2, 
   ArrowUpRight, 
@@ -21,19 +20,13 @@ import {
   Code2, 
   Zap, 
   Layers, 
-  Globe2, 
   ChevronRight, 
   Check, 
   Activity, 
   Eye, 
-  MousePointerClick, 
   TrendingUp, 
   Share2, 
-  Compass, 
-  Server, 
-  Database,
-  ShieldCheck,
-  Cpu
+  Compass
 } from 'lucide-react';
 
 export default function SEOServices() {
@@ -48,12 +41,9 @@ export default function SEOServices() {
     { title: 'Off-Page SEO', desc: 'Topical authority, contextual backlink acquisition & digital PR outreach', icon: Link2 },
     { title: 'Local SEO', desc: 'Google Business Profile, localized citations, NAP integrity & local schema', icon: MapPin },
     { title: 'E-commerce SEO', desc: 'Shopify/WooCommerce taxonomies, product schema & faceted filter handling', icon: ShoppingCart },
-    { title: 'International SEO', desc: 'Hreflang tags, multi-currency routing & multi-regional search targeting', icon: Globe2 },
     { title: 'Keyword Strategy', desc: 'Search intent mapping, difficulty scoring & competitor content gap discovery', icon: Key },
     { title: 'Content SEO', desc: 'Topic clusters, pillar page architecture & helpful search content briefs', icon: Layers },
     { title: 'SEO Audits', desc: 'Deep Screaming Frog crawls, technical log analysis & toxic link detection', icon: Compass },
-    { title: 'GEO & AEO', desc: 'Generative Engine & Answer Engine Optimization for ChatGPT, Perplexity & AI Overviews', icon: Sparkles },
-    { title: 'Entity Optimization', desc: 'Knowledge graph alignment, structured JSON-LD graphs & brand co-occurrences', icon: Cpu },
     { title: 'Conversion SEO', desc: 'Aligning high-intent SERP traffic with seamless on-page buying funnels', icon: TrendingUp },
   ];
 
@@ -1142,165 +1132,7 @@ Cluster: Kids Electric Mobility
           </div>
         </div>
 
-        {/* 5. SEO Reporting & Performance Metrics Dashboard */}
-        <div className="mb-24">
-          <div className="text-center max-w-2xl mx-auto mb-10">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-blue-600">
-              Accountability Framework
-            </span>
-            <h3 className="mt-2 font-display text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
-              SEO Reporting & Performance Metrics Model
-            </h3>
-            <p className="mt-2 text-xs sm:text-sm text-slate-600 font-semibold">
-              How search success is measured, reported, and linked directly to commercial outcomes.
-            </p>
-          </div>
 
-          {/* Clean Dashboard Preview Container */}
-          <div className="rounded-3xl bg-slate-900 text-white p-6 sm:p-10 border border-slate-800 shadow-xl relative overflow-hidden">
-            {/* Ambient glows inside dashboard */}
-            <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500/10 rounded-full blur-[90px] pointer-events-none"></div>
-
-            {/* Dashboard Top bar */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-8 border-b border-slate-800 gap-4">
-              <div>
-                <div className="flex items-center space-x-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                  <span className="font-mono text-xs uppercase tracking-widest text-slate-400 font-bold">
-                    Executive Performance Dashboard
-                  </span>
-                </div>
-                <h4 className="font-display text-xl sm:text-2xl font-bold text-white mt-1">
-                  Organic Growth & Search Health Overview
-                </h4>
-              </div>
-
-              <div className="px-3.5 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-[11px] font-mono text-slate-300">
-                Data Sources: GSC • GA4 • CrUX (Monthly Cycle)
-              </div>
-            </div>
-
-            {/* Core Metrics Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-              {[
-                { label: 'Organic Impressions', value: '1.24M', change: '+142% vs baseline', sub: 'Search Visibility' },
-                { label: 'Organic Search Clicks', value: '48.6K', change: '+88% high-intent clicks', sub: 'Google SERP Traffic' },
-                { label: 'Average Organic CTR', value: '3.92%', change: '+0.8% snippet CTR', sub: 'Title & Meta Gains' },
-                { label: 'Indexed Page Health', value: '99.4%', change: '0 crawl errors', sub: 'Sitemap Compliance' },
-              ].map((metric, idx) => (
-                <div key={idx} className="p-4 sm:p-5 rounded-2xl bg-slate-800/80 border border-slate-700/80 space-y-1">
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-semibold block">
-                    {metric.label}
-                  </span>
-                  <div className="font-display text-2xl sm:text-3xl font-extrabold text-white">
-                    {metric.value}
-                  </div>
-                  <span className="text-xs text-emerald-400 font-semibold block">
-                    {metric.change}
-                  </span>
-                  <span className="text-[10px] text-slate-400 block pt-1">
-                    {metric.sub}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            {/* Secondary KPIs: Keywords, Backlinks, Core Web Vitals */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-t border-slate-800">
-              
-              {/* Keyword Ranking Spread */}
-              <div className="p-5 rounded-2xl bg-slate-800/50 border border-slate-700/60 space-y-3">
-                <span className="text-xs font-mono uppercase tracking-wider text-slate-300 font-bold block">
-                  Keyword Positions
-                </span>
-                <div className="space-y-2">
-                  <div className="flex justify-between text-xs">
-                    <span className="text-slate-400">Top 3 Positions</span>
-                    <span className="font-mono font-bold text-white">28 keywords</span>
-                  </div>
-                  <div className="w-full bg-slate-700 h-2 rounded-full overflow-hidden">
-                    <div className="bg-emerald-500 h-full w-[45%]"></div>
-                  </div>
-
-                  <div className="flex justify-between text-xs pt-1">
-                    <span className="text-slate-400">Top 4 - 10 Positions</span>
-                    <span className="font-mono font-bold text-white">64 keywords</span>
-                  </div>
-                  <div className="w-full bg-slate-700 h-2 rounded-full overflow-hidden">
-                    <div className="bg-blue-500 h-full w-[65%]"></div>
-                  </div>
-
-                  <div className="flex justify-between text-xs pt-1">
-                    <span className="text-slate-400">Page 2 (Striking Distance)</span>
-                    <span className="font-mono font-bold text-white">42 keywords</span>
-                  </div>
-                  <div className="w-full bg-slate-700 h-2 rounded-full overflow-hidden">
-                    <div className="bg-indigo-500 h-full w-[35%]"></div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Backlink Profile Health */}
-              <div className="p-5 rounded-2xl bg-slate-800/50 border border-slate-700/60 space-y-3">
-                <span className="text-xs font-mono uppercase tracking-wider text-slate-300 font-bold block">
-                  Backlink Equity & Authority
-                </span>
-                <div className="grid grid-cols-2 gap-3 text-center">
-                  <div className="p-3 bg-slate-900 rounded-xl">
-                    <span className="text-[10px] text-slate-400 uppercase font-mono block">Domain Rating</span>
-                    <span className="text-xl font-bold font-display text-blue-400">DR 38</span>
-                  </div>
-                  <div className="p-3 bg-slate-900 rounded-xl">
-                    <span className="text-[10px] text-slate-400 uppercase font-mono block">Referring Domains</span>
-                    <span className="text-xl font-bold font-display text-emerald-400">142</span>
-                  </div>
-                </div>
-                <div className="text-[11px] text-slate-300 leading-normal flex items-center space-x-1.5 pt-1">
-                  <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                  <span>Toxic link ratio: 0% • Verified white-hat editorial citations</span>
-                </div>
-              </div>
-
-              {/* Core Web Vitals Status */}
-              <div className="p-5 rounded-2xl bg-slate-800/50 border border-slate-700/60 space-y-3">
-                <span className="text-xs font-mono uppercase tracking-wider text-slate-300 font-bold block">
-                  Core Web Vitals (CrUX Real-User)
-                </span>
-                <div className="space-y-2 text-xs">
-                  <div className="flex items-center justify-between p-2 rounded-lg bg-slate-900">
-                    <span className="text-slate-300">LCP (Largest Contentful Paint)</span>
-                    <span className="font-mono text-emerald-400 font-bold">1.4s (Good)</span>
-                  </div>
-                  <div className="flex items-center justify-between p-2 rounded-lg bg-slate-900">
-                    <span className="text-slate-300">INP (Interaction to Next Paint)</span>
-                    <span className="font-mono text-emerald-400 font-bold">82ms (Good)</span>
-                  </div>
-                  <div className="flex items-center justify-between p-2 rounded-lg bg-slate-900">
-                    <span className="text-slate-300">CLS (Cumulative Layout Shift)</span>
-                    <span className="font-mono text-emerald-400 font-bold">0.02 (Good)</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            {/* Illustrative Notice Disclaimer */}
-            <div className="mt-8 pt-4 border-t border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-slate-400">
-              <span className="flex items-center space-x-2">
-                <ShieldCheck className="w-4 h-4 text-blue-400 shrink-0" />
-                <span>
-                  <strong>Illustrative Performance Reporting Model:</strong> All metric dashboards 
-                  are tailored to client project requirements and authenticated through official client 
-                  Google Search Console & Google Analytics 4 accounts.
-                </span>
-              </span>
-              <a href="#contact" className="text-blue-400 font-bold hover:underline shrink-0">
-                Setup Custom Metrics →
-              </a>
-            </div>
-
-          </div>
-        </div>
 
         {/* 6. Practical SEO Case Study */}
         <div className="mb-20">

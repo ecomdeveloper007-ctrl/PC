@@ -148,20 +148,20 @@ export default function FiverrGigs() {
           {filteredGigs.map((gig) => (
             <div
               key={gig.id}
-              className={`rounded-2xl bg-white border transition-all duration-300 flex flex-col justify-between hover:shadow-xl group relative overflow-hidden ${
+              className={`rounded-3xl bg-white border transition-all duration-300 flex flex-col justify-between hover:shadow-[0_16px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1 group relative overflow-hidden ${
                 gig.popular 
-                  ? 'border-blue-300 ring-1 ring-blue-500/20 shadow-md' 
-                  : 'border-slate-200 hover:border-blue-400/50 shadow-sm'
+                  ? 'border-blue-400/80 ring-2 ring-blue-500/20 shadow-md' 
+                  : 'border-slate-200/90 hover:border-blue-400/50 shadow-xs'
               }`}
             >
               {/* Highlight ribbon if popular */}
               {gig.popular && (
-                <div className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-[10px] font-mono font-bold uppercase tracking-widest text-center py-1 px-3">
-                  🔥 Highly Requested Gig
+                <div className="bg-linear-to-r from-blue-600 via-indigo-600 to-blue-600 text-white text-[10px] font-mono font-bold uppercase tracking-widest text-center py-1.5 px-3 shadow-xs">
+                  ★ High Demand Verified Gig
                 </div>
               )}
 
-              <div className="p-5 sm:p-6 space-y-4">
+              <div className="p-6 space-y-4">
                 
                 {/* Category & Badge Header */}
                 <div className="flex items-center justify-between gap-2">
@@ -182,23 +182,23 @@ export default function FiverrGigs() {
                   </h3>
                   
                   {/* Rating & Review count */}
-                  <div className="flex items-center space-x-1.5 mt-2 text-xs">
+                  <div className="flex items-center space-x-1.5 mt-2.5 text-xs">
                     <div className="flex items-center text-amber-500">
                       <Star className="w-3.5 h-3.5 fill-amber-500" />
                       <span className="ml-1 font-bold text-slate-900">{gig.rating.toFixed(1)}</span>
                     </div>
-                    <span className="text-slate-400 font-bold">•</span>
+                    <span className="text-slate-300 font-bold">•</span>
                     <span className="text-slate-500 text-[11px] font-medium font-mono">({gig.reviewsCount} reviews)</span>
                   </div>
                 </div>
 
                 {/* Description */}
-                <p className="text-xs text-slate-600 leading-relaxed font-medium line-clamp-3">
+                <p className="text-xs text-slate-650 leading-relaxed font-medium line-clamp-3">
                   {gig.description}
                 </p>
 
                 {/* Key Deliverables Bullet Points */}
-                <div className="pt-3 border-t border-slate-100 space-y-2">
+                <div className="pt-3.5 border-t border-slate-100 space-y-2">
                   <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-slate-400 block">
                     What's Included:
                   </span>
@@ -214,13 +214,13 @@ export default function FiverrGigs() {
               </div>
 
               {/* Card Footer: Delivery Time & Order Button */}
-              <div className="p-5 sm:p-6 pt-0 mt-auto">
-                <div className="flex items-center justify-between text-[11px] text-slate-500 mb-3 pt-3 border-t border-slate-100 font-mono">
-                  <div className="flex items-center space-x-1 text-slate-600 font-semibold">
+              <div className="p-6 pt-0 mt-auto">
+                <div className="flex items-center justify-between text-[11px] text-slate-500 mb-3 pt-3.5 border-t border-slate-100 font-mono">
+                  <div className="flex items-center space-x-1.5 text-slate-650 font-semibold">
                     <Clock className="w-3.5 h-3.5 text-blue-600" />
                     <span>Delivery: {gig.deliveryTime}</span>
                   </div>
-                  <span className="text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                  <span className="text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 text-[10px]">
                     Fiverr Escrow
                   </span>
                 </div>
@@ -229,7 +229,7 @@ export default function FiverrGigs() {
                   href={gig.gigUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center py-3 px-4 rounded-xl text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 active:scale-95 transition-all shadow-md shadow-blue-600/20 group/btn"
+                  className="w-full inline-flex items-center justify-center py-3.5 px-4 rounded-xl text-xs font-bold text-white bg-linear-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 active:scale-95 transition-all shadow-md shadow-blue-600/20 hover:shadow-lg hover:shadow-blue-600/30 group/btn"
                   id={`fiverr-gig-btn-${gig.id}`}
                 >
                   <span>Order Gig on Fiverr</span>
